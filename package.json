@@ -1,0 +1,20 @@
+{
+  "name": "avanti",
+  "version": "2.0.0",
+  "description": "Avanti Web",
+  "author": "Tomas Gonzalez",
+  "devDependencies": {
+    "del": "2.2.0",
+    "gulp": "3.9.1",
+    "gulp-concat": "2.6.0",
+    "gulp-csso": "1.1.0",
+    "gulp-font-icon": "1.0.4",
+    "gulp-jsonminify": "1.0.0",
+    "gulp-less": "3.3.2",
+    "gulp-release-tasks": "0.0.3",
+    "gulp-rename": "1.2.2",
+    "gulp-uglify": "1.5.3",
+    "gulp-webserver": "0.9.1",
+    "run-sequence": "1.1.5"
+  }
+}

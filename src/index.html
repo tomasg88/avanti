@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="avanti">
+<head>
+
+  <!-- Meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+
+  <title>Avanti</title>
+  <link rel="icon" type="image/png" href="img/icons/favicon.jpg">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/avanti.min.css" />
+
+  <!-- JQuery -->
+  <script src="libs/jquery/jquery-3.2.1.min.js"></script>
+  <script src="libs/jquery/jquery.transit.min.js"></script>
+
+  <!-- Ng libs -->
+  <script src="libs/ng/angular.min.js"></script>
+  <script src="libs/ng/angular-animate.min.js"></script>
+  <script src="libs/ng/angular-route.min.js"></script>
+  <script src="libs/ng/angular-sanitize.min.js"></script>
+  <script src="libs/ng/angular-touch.min.js"></script>
+  <script src="libs/ng/angular-translate.min.js"></script>
+  <script src="libs/ng/angular-translate-loader-static-files.min.js"></script>
+
+  <!-- Others -->
+  <script src="libs/typed/typed.js"></script>
+
+  <!-- Js custom -->
+  <script src="js/avanti.min.js"></script>
+
+</head>
+<body>
+
+  <!-- Loading -->
+  <div id="loader" class="seccion back-solido-oscuro loader-screen">
+    <span class="loader-line"></span>
+  </div>
+
+  <!-- Modal -->
+  <!-- <div id="modal" class="shadow" ng-include="'/views/includes/modal.html'">
+  </div> -->
+
+  <!-- Main-content -->
+  <div class="container-fluid" ng-style="getResize(165)" my-resize>
+    <div ng-view></div>
+  </div>
+
+  <!-- Contenido flotante -->
+  <div aux-menu ng-class="{'animate-up': !home}">
+  </div>
+
+  <div top-links ng-class="{'animate-down': !home}">
+  </div>
+
+</body>
+</html>

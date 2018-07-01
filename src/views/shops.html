@@ -1,0 +1,29 @@
+<div>
+  <div class="row no-gutters text-center">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <div class="back-solido-oscuro claro" ng-style="{'height': windowHeight }">
+        <span class="indicador claro"><p>P</p></span>
+        <h1 class="titulo-seccion">{{ "SHOPS.TITLE" | translate }}</h1>
+        <span class="separador"></span>
+        <div class="row no-gutters">
+
+          <div class="local" ng-repeat="shop in shopsList">
+            <h2 class="titulo-item">{{ shop.name }}</h2>
+            <div class="datos-local">
+              <p>
+                <span>
+                  <img class="mapa-marker" src="img/icons/iconoMaps.png">
+                </span>
+                {{ shop.address + ',' }}
+              </p>
+              <p>{{ shop.city }}</p>
+              <p>Tel.: {{ shop.phone }}</p>
+            </div>
+          </div>
+
+        </div>
+        <span class="separador"></span>
+      </div>
+    </div>
+  </div>
+</div>

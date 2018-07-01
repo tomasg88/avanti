@@ -1,0 +1,57 @@
+<div id="obras-detalle" ng-controller="bookDetailsCtlr">
+  <div class="row no-gutters text-center">
+    <div class="col-lg-6 col-md-6 col-sm-6 hidden-xs">
+      <div class="back-degrade-der" ng-style="{'height': windowHeight }">
+        <div class="presentation">
+          <img class="tapa-libro" src="img/tapa.png" alt="">
+          <gallery></gallery>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <div class="back-solido-oscuro claro" ng-style="{'height': windowHeight }">
+        <div class="row no-gutters">
+          <div class="col-lg-12 text-center">
+            <h2 class="titulo-item" ng-style="specialStyles.tituloItem">
+              {{ "BOOKS.BOOK_1.NAME" | translate }}
+            </h2>
+            <span class="separador" ng-style="specialStyles.contenido"></span>
+          </div>
+        </div>
+        <div class="row cuentos">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+            <h5 class="cuento">{{ "BOOKS.BOOK_1.TALE_1" | translate }}</h5>
+            <h5 class="cuento">{{ "BOOKS.BOOK_1.TALE_2" | translate }}</h5>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
+            <h5 class="cuento">{{ "BOOKS.BOOK_1.TALE_3" | translate }}</h5>
+            <h5 class="cuento">{{ "BOOKS.BOOK_1.TALE_4" | translate }}</h5>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-12">
+            <span class="separador" ng-style="specialStyles.contenido"></span>
+            <p class="contenido" ng-style="specialStyles.contenido">
+              {{ "BOOKS.BOOK_1.DESCRIPTION" | translate }}
+            </p>
+            <span class="separador" ng-style="specialStyles.contenido"></span>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-12 text-center">
+            <ul class="container-propiedades-libro">
+              <li class="propiedades-libro" ng-style="specialStyles.propiedadesLibro"><strong>{{ "BOOKS.BOOK_1.SPECS.TRANSLATOR" | translate }}: </strong>Daniela Camozzi</li>
+              <li class="propiedades-libro" ng-style="specialStyles.propiedadesLibro"><strong>{{ "BOOKS.BOOK_1.SPECS.PRICE" | translate }}: </strong>$ 390,00</li>
+              <li class="propiedades-libro" ng-style="specialStyles.propiedadesLibro"><strong>{{ "BOOKS.BOOK_1.SPECS.RELEASE_DATE" | translate }}: </strong>07/2017</li>
+              <li class="propiedades-libro" ng-style="specialStyles.propiedadesLibro"><strong>{{ "BOOKS.BOOK_1.SPECS.LANGUAGE" | translate }}: </strong>{{ "BOOKS.BOOK_1.VALUES.LANGUAGE" | translate }}</li>
+              <li class="propiedades-libro" ng-style="specialStyles.propiedadesLibro"><strong>{{ "BOOKS.BOOK_1.SPECS.PAGES" | translate }}: </strong>112</li>
+              <li class="propiedades-libro" ng-style="specialStyles.propiedadesLibro"><strong>{{ "BOOKS.BOOK_1.SPECS.SIZE" | translate }}: </strong>20 X 20 cm.</li>
+              <li class="propiedades-libro" ng-style="specialStyles.propiedadesLibro"><strong>{{ "BOOKS.BOOK_1.SPECS.FORMAT" | translate }}: </strong>Rustica</li>
+              <li class="propiedades-libro" ng-style="specialStyles.propiedadesLibro"><strong>{{ "BOOKS.BOOK_1.SPECS.ISBN" | translate }}: </strong>978-987-42-4114-6</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
