@@ -88,8 +88,8 @@
           .useSanitizeValueStrategy('escape');
       }
     ])
-    .run(['$rootScope', '$location', '$window',
-      function($rootScope,  $location, $window) {
+    .run(['$rootScope', '$location', '$window', '$timeout',
+      function($rootScope,  $location, $window, $timeout) {
 
         $rootScope.windowHeight = '';
         $rootScope.home = true;
@@ -114,6 +114,10 @@
             window.open(target, "_blank");
           }
         }
+
+        $timeout(function() {
+          $('#loader').hide();
+        }, 10000);
       }
     ]);
 })();
