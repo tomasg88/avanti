@@ -1,182 +1,170 @@
 // Media queries de avanti-styles.less
 // -----------------------------------
-
 @media (min-width: @screen-xxs) and (max-width: @screen-xxs-max) {
-
-  .logo {
-    text-align: center;
-    margin-top: 12%;
-    img {
-      width: 310px;
-    }
-    .container-leyenda {
-      position: relative;
-      left: 10%;
-      font-size: 20px;
-      .leyenda {
-        letter-spacing: 5px;
-      }
-    }
-  }
-  .menu {
-    text-align: center;
-    margin-top: 10%;
-    .opcion {
-      display: grid;
-      width : 50%;
-      height : 30px;
-      margin-left: 25%;
-      a {
-        font-weight: 800;
-        margin-top: 5px;
-        margin-bottom: 0px;
+    .logo {
         text-align: center;
-        color: #E0E0E0;
-        width: 25px;
-      }
-      &:hover {
-        opacity: 0.6;
-      }
+        margin-top: 12%;
+        img {
+            width: 310px;
+        }
+        .container-leyenda {
+            position: relative;
+            left: 10%;
+            font-size: 20px;
+            .leyenda {
+                letter-spacing: 5px;
+            }
+        }
     }
-  }
-
-  .menu-mobile-container {
-    .lengueta {
-      left: 40%;
-      width: 80px;
-      height: 50px;
-      p {
-        padding-top: 13px;
-        font-weight: 600;
-        letter-spacing: 1px;
-      }
+    .menu {
+        text-align: center;
+        margin-top: 10%;
+        .opcion {
+            display: grid;
+            width: 50%;
+            height: 30px;
+            margin-left: 25%;
+            a {
+                font-weight: 800;
+                margin-top: 5px;
+                margin-bottom: 0px;
+                text-align: center;
+                color: #E0E0E0;
+                width: 25px;
+            }
+            &:hover {
+                opacity: 0.6;
+            }
+        }
     }
-  }
-  .separador {
-    margin-bottom: 0px;
-    width: 65%;
-  }
-  .separador-verti {
-    margin-top: 50.5%;
-  }
-  .tapa-libro {
-    width: 200px;
-  }
-  .indicador {
-    width: 20px;
-    margin-top: 1%;
-    p {
-      margin: 50px auto 0;
-      font-size: 12px;
+    .menu-mobile-container {
+        .lengueta {
+            left: 40%;
+            width: 80px;
+            height: 50px;
+            p {
+                padding-top: 13px;
+                font-weight: 600;
+                letter-spacing: 1px;
+            }
+        }
     }
-  }
-  .titulo-seccion {
-    letter-spacing: 6px;
-    font-size: 30px;
-    margin-top: 2%;
-    margin-bottom: 0;
-  }
-  .titulo-item {
-    font-size: 25px;
-  }
-  .titulo-detalle {
-    font-weight: 400;
-    letter-spacing: 7px;
-    font-size: 30px;
-    margin-top: 10%;
-    margin-bottom: 7%;
-  }
-  .contenido {
-    font-size: 15px;
-    width: 100%;
-    margin-left: 0%;
-    margin-top: 2%;
-    margin-bottom: 3%;
-    padding: 0 10px;
-    line-height: 2.2;
-    &.largo {
-      line-height: 1.6;
+    .separador {
+        margin-bottom: 0px;
+        width: 65%;
     }
-  }
-  .cuentos {
-    margin: 0 0%;
-    .cuento {
-      font-size: 12px;
-      letter-spacing: 0.9px;
-      margin-top: 7%
+    .separador-verti {
+        margin-top: 50.5%;
     }
-  }
-  .item.libro {
-    padding-top: 0.5%;
-    padding-bottom: 0%;
+    .tapa-libro {
+        width: 200px;
+    }
+    .indicador {
+        width: 20px;
+        margin-top: 1%;
+        p {
+            margin: 50px auto 0;
+            font-size: 12px;
+        }
+    }
+    .titulo-seccion {
+        letter-spacing: 6px;
+        font-size: 30px;
+        margin-top: 2%;
+        margin-bottom: 0;
+    }
     .titulo-item {
-      font-size: 25px;
+        font-size: 25px;
     }
-  }
-  .container-propiedades-libro {
-    margin-top: 1%;
-    padding-left: 0;
-    .propiedades-libro {
-      font-size: 12px;
-      letter-spacing: 1px;
-      strong {
-        font-weight: 800;
-      }
+    .titulo-detalle {
+        font-weight: 400;
+        letter-spacing: 7px;
+        font-size: 30px;
+        margin-top: 10%;
+        margin-bottom: 7%;
     }
-  }
-  .local {
-    display: inline-block;
-    .datos-local p {
-      font-size: 16px;
-      font-weight: 300;
-      letter-spacing: 1.7px;
-      margin-bottom: 5px;
-      /*line-height: 4,9px;*/
+    .contenido {
+        font-size: 15px;
+        width: 100%;
+        margin-left: 0%;
+        margin-top: 2%;
+        margin-bottom: 3%;
+        padding: 0 10px;
+        line-height: 2.2;
+        &.largo {
+            line-height: 1.6;
+        }
     }
-    .mapa-marker {
-      padding-bottom: 2px;
-      margin-right: 5px;
-      content:url("../img/icons/iconoMaps.png");
+    .cuentos {
+        margin: 0 0%;
+        .cuento {
+            font-size: 12px;
+            letter-spacing: 0.9px;
+            margin-top: 7%
+        }
     }
-  }
-  .contacto-datos {
-    padding-left: 4.5%;
-    width: 50%;
-    text-align: left;
-  }
-  .mail {
-    font-size: 17px;
-    letter-spacing: 0;
-    position: absolute;
-    bottom: 30px;
-  }
-  .form-contacto {
-    margin-left: 0;
-    padding-top: 70%;
-  }
-  .mensajes-error {
-    display: block;
-    padding-top: 82%;
-  }
-  .error {
-    letter-spacing: 1px;
-    top: 47%;
-  }
-
+    .item.libro {
+        padding-top: 0.5%;
+        padding-bottom: 0%;
+        .titulo-item {
+            font-size: 25px;
+        }
+    }
+    .container-propiedades-libro {
+        margin-top: 1%;
+        padding-left: 0;
+        .propiedades-libro {
+            font-size: 12px;
+            letter-spacing: 1px;
+            strong {
+                font-weight: 800;
+            }
+        }
+    }
+    .local {
+        display: inline-block;
+        .datos-local p {
+            font-size: 16px;
+            font-weight: 300;
+            letter-spacing: 1.7px;
+            margin-bottom: 5px;
+            /*line-height: 4,9px;*/
+        }
+        .mapa-marker {
+            padding-bottom: 2px;
+            margin-right: 5px;
+            content: url("../img/icons/iconoMaps.png");
+        }
+    }
+    .contacto-datos {
+        padding-left: 4.5%;
+        width: 50%;
+        text-align: left;
+    }
+    .mail {
+        font-size: 17px;
+        letter-spacing: 0;
+        position: absolute;
+        bottom: 30px;
+    }
+    .form-contacto {
+        margin-left: 0;
+        padding-top: 70%;
+    }
+    .mensajes-error {
+        display: block;
+        padding-top: 82%;
+    }
+    .error {
+        letter-spacing: 1px;
+        top: 47%;
+    }
 }
 
-@media (min-width: @screen-xs) and (max-width: @screen-xs-max) {
+@media (min-width: @screen-xs) and (max-width: @screen-xs-max) {}
 
-}
+@media (min-width: @screen-sm) and (max-width: @screen-sm-max) {}
 
-@media (min-width: @screen-sm) and (max-width: @screen-sm-max) {
+@media (min-width: @screen-md) and (max-width: @screen-md-max) {}
 
-}
-
-@media (min-width: @screen-md) and (max-width: @screen-md-max) {
-
-}
-
-@media (min-width: @screen-lg) {
-
-}
+@media (min-width: @screen-lg) {}

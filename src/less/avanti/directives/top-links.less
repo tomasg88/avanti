@@ -1,55 +1,55 @@
 // Estilos para directiva top-links
 //-------------------------------------
 .top-links {
-  position: fixed;
-  top: -12%;
-  left: 0;
-  width: 98%;
-  margin-left: 1%;
-  transition: all .3s ease-in-out;
-  &.animate-down {
-    transform: translate(0px, 90px);
-  }
-  .home-link {
-    opacity: 0.4;
-    cursor: pointer;
-    p {
-      color: white;
+    position: fixed;
+    top: -12%;
+    left: 0;
+    width: 98%;
+    margin-left: 1%;
+    transition: all .3s ease-in-out;
+    &.animate-down {
+        transform: translate(0px, 90px);
     }
-    img {
-      width: 40px;
-      height: 40px;
-      border-radius: 20px;
+    .home-link {
+        opacity: 0.4;
+        cursor: pointer;
+        p {
+            color: white;
+        }
+        img {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+        }
+        &:hover {
+            opacity: 1;
+        }
     }
-    &:hover {
-      opacity: 1;
+    .redes span img {
+        opacity: 0.2;
+        border-radius: 5px;
+        &:hover {
+            opacity: 1;
+        }
     }
-  }
-  .redes span img {
-    opacity: 0.2;
-    border-radius: 5px;
-    &:hover {
-      opacity: 1;
-    }
-  }
 }
 
 //
 // Responsive
 //
 @media (min-width: @screen-xxs) and (max-width: @screen-xxs-max) {
-  .top-links {
-    width: 90%;
-    top: -10%;
-    margin-left: 5%;
-    .home-link {
-      img {
-        width: 30px;
-        height: 30px;
-      }
+    .top-links {
+        width: 90%;
+        top: -10%;
+        margin-left: 5%;
+        .home-link {
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        .redes span img {
+            width: 80%;
+        }
     }
-    .redes span img {
-      width: 80%;
-    }
-  }
 }
