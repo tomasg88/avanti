@@ -18,12 +18,12 @@ var seq = require('run-sequence');
 /* Dev tasks */
 var jsbeautifier = require('gulp-jsbeautifier');
 gulp.task('jsbeautifier', function() {
-    gulp.src(['./*.js', './*.json'])
+    gulp.src(['src/js/**/*.js'])
         .pipe(jsbeautifier({
             "indent_size": 4,
             "indent_char": ' ',
         }))
-        .pipe(gulp.dest('src/beautified/'));
+        .pipe(gulp.dest('src/js/'));
 });
 
 // -----------------------------------------------------

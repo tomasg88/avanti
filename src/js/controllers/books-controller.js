@@ -7,20 +7,19 @@
 
 'use strict';
 
-angular.module('avanti').controller('bookCtlr',
-['$scope',
-  function($scope) {
+angular.module('avanti').controller('bookCtlr', ['$scope',
+    function($scope) {
 
-    /* PRIVATE FUNCTIONS */
-    function init() {
-      // Namespace for holding variables and easier interpretation from the view
-      $scope.vv = {};
+        /* PRIVATE FUNCTIONS */
+        function init() {
+            // Namespace for holding variables and easier interpretation from the view
+            $scope.vv = {};
+        }
+
+        /* PUBLIC FUNCTIONS */
+
+
+        // Initialize
+        init();
     }
-
-    /* PUBLIC FUNCTIONS */
-
-
-    // Initialize
-    init();
-  }
 ]);
