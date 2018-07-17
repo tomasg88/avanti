@@ -15,6 +15,17 @@ var uglify = require('gulp-uglify');
 var webServer = require('gulp-webserver');
 var seq = require('run-sequence');
 
+/* Dev tasks */
+var htmlBeautify = require('gulp-html-beautify');
+gulp.task('htmlBeautify', function() {
+    gulp.src('src/**/*.html')
+        .pipe(htmlBeautify({
+            "indent_size": 4,
+            "indent_with_tabs": true
+        }))
+        .pipe(gulp.dest('src/beautified/'));
+});
+
 // -----------------------------------------------------
 // Globals
 // -----------------------------------------------------
