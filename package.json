@@ -9,7 +9,6 @@
         "gulp-concat": "2.6.0",
         "gulp-csso": "1.1.0",
         "gulp-font-icon": "1.0.4",
-        "gulp-html-beautify": "^1.0.1",
         "gulp-jsbeautifier": "^2.1.2",
         "gulp-jsonminify": "1.0.0",
         "gulp-less": "3.3.2",
