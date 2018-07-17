@@ -1,81 +1,81 @@
 {
-  "MENU": "Menu",
-  "MODAL": {
-    "WELCOME": "Hello!",
-    "MORE_INFO": "MORE INFO!"
-  },
-  "TYPE_EFFECT": {
-    "FIRST": "EDITORIAL",
-    "SECOND": "STORIES",
-    "THIRD": "ILLUSTRATIONS",
-    "FOURTH": "AN EXPERIENCE"
-  },
-  "LOOK_INSIDE": "Look inside",
-  "HOME": {
-    "TITLE": "Home"
-  },
-  "ABOUT_US": {
-    "TITLE": "About us",
-    "CONTENT": "In Avanti we have as a fundamental premise the careful edition treatment of the literary works. We edit contemplating the infinity of resources that can be complemented with the history that we want to publish, we connect two expressions. On one hand the writings and on the other the illustrations, their conjugation turn each work into a unique production. We will re-create classics and we will discover new authors. The illustrators will interpretate the work with their gut feelings. Who said that illustration books are just for kids? At Avanti we believe that in the world that we live today, adults need more than ever the use of illustrations to imagine a story and immerse themselves in another reality. We want to provide all possible resources to facilitate that journey, an imaginary and visual journey. ¡Welcome!"
-  },
-  "AUTHORS": {
-    "TITLE": "Authors",
-    "AUTHOR_1": {
-      "NAME": "H. P. Lovecraft",
-      "LIFE": "Howard Phillips Lovecraft (United States, 1890 - 1937). Novelist and author of countless horror and science fiction short stories, he is the founder of a mythology that continues to attract adherents. He is known as the greatest creator of cosmic horror, a subgenre that diverges from traditional supernatural horror and incorporates elements of science fiction. He is considered one of the most influential writers in the horror genre of the 20th century."
-    }
-  },
-  "ILLUSTRATORS": {
-    "TITLE": "Illustrators",
-    "SEE_PORTFOLIO": "See portfolio",
-    "ILLUSTRATOR_1": {
-      "NAME": "Ziperart",
-      "LIFE": "Ziperart was born in Paraná, Argentina, January 4th, 1976. He lived in Gualeguay, Argentina, until he was 18, then moved to Buenos Aires where he currently resides. He studied at the Pilidiano Pueyrredón National School of Fine Arts. His professional trajectory has centered around illustration, working at various local and international print media establishments, including Revista Ñ and El Cronista. He has additionally contributed specific productions to various marketing campaigns."
-    }
-  },
-  "BOOKS": {
-    "TITLE": "Books",
-    "BOOK_1": {
-      "NAME": "Stories by H.P. Lovecraft",
-      "NAME_2": "Illustrations by Ziperart",
-      "TALE_1": "The Colour Out of Space",
-      "TALE_2": "The Nameless City",
-      "TALE_3": "The Festival",
-      "TALE_4": "The Call of Cthulhu",
-      "DESCRIPTION": "The four stories comprising this book —The Nameless City, The Festival, The Color Out of Space, and The Call of Cthulhu— are the first in the period that has been termed the \"Cthulhu Mythos\", and were written between 1921 and 1935. Here Lovecraft conveys his philosophy of cosmicism: humankind is meaningless in comparison to the forces in the universe—forces we will never recognize nor comprehend. Nevertheless, as he himself once noted in a letter, this philosophical idea pervades his entire body of work: Now all my tales are based on the fundamental premise that common human laws and interests and emotions have no validity or significance in the vast cosmos-at-large.",
-      "SPECS": {
-        "TRANSLATOR": "Translator",
-        "PRICE": "Price",
-        "RELEASE_DATE": "Release date",
-        "LANGUAGE": "Languages",
-        "PAGES": "Pages",
-        "SIZE": "Size",
-        "FORMAT": "Format",
-        "ISBN": "ISBN"
-      },
-      "VALUES": {
-        "LANGUAGE": "Spanish"
-      }
-    }
-  },
-  "SHOPS": {
-    "TITLE": "Point of sales"
-  },
-  "CONTACT": {
-    "TITLE": "Contact",
-    "FIELDS": {
-      "NAME": "Name",
-      "EMAIL": "E-mail",
-      "MSG": "Message"
+    "MENU": "Menu",
+    "MODAL": {
+        "WELCOME": "Hello!",
+        "MORE_INFO": "MORE INFO!"
     },
-    "BUTTONS": {
-      "SEND": "Send"
+    "TYPE_EFFECT": {
+        "FIRST": "EDITORIAL",
+        "SECOND": "STORIES",
+        "THIRD": "ILLUSTRATIONS",
+        "FOURTH": "AN EXPERIENCE"
     },
-    "MESSAGES": {
-      "MANDATORY_FIELD": "All fields are mandatory",
-      "EMAIL_FORMAT": "Incorrect email format",
-      "SEND_ERROR": "Error sending email",
-      "SUCCESS": "Message sent. Thank you!"
+    "LOOK_INSIDE": "Look inside",
+    "HOME": {
+        "TITLE": "Home"
+    },
+    "ABOUT_US": {
+        "TITLE": "About us",
+        "CONTENT": "In Avanti we have as a fundamental premise the careful edition treatment of the literary works. We edit contemplating the infinity of resources that can be complemented with the history that we want to publish, we connect two expressions. On one hand the writings and on the other the illustrations, their conjugation turn each work into a unique production. We will re-create classics and we will discover new authors. The illustrators will interpretate the work with their gut feelings. Who said that illustration books are just for kids? At Avanti we believe that in the world that we live today, adults need more than ever the use of illustrations to imagine a story and immerse themselves in another reality. We want to provide all possible resources to facilitate that journey, an imaginary and visual journey. ¡Welcome!"
+    },
+    "AUTHORS": {
+        "TITLE": "Authors",
+        "AUTHOR_1": {
+            "NAME": "H. P. Lovecraft",
+            "LIFE": "Howard Phillips Lovecraft (United States, 1890 - 1937). Novelist and author of countless horror and science fiction short stories, he is the founder of a mythology that continues to attract adherents. He is known as the greatest creator of cosmic horror, a subgenre that diverges from traditional supernatural horror and incorporates elements of science fiction. He is considered one of the most influential writers in the horror genre of the 20th century."
+        }
+    },
+    "ILLUSTRATORS": {
+        "TITLE": "Illustrators",
+        "SEE_PORTFOLIO": "See portfolio",
+        "ILLUSTRATOR_1": {
+            "NAME": "Ziperart",
+            "LIFE": "Ziperart was born in Paraná, Argentina, January 4th, 1976. He lived in Gualeguay, Argentina, until he was 18, then moved to Buenos Aires where he currently resides. He studied at the Pilidiano Pueyrredón National School of Fine Arts. His professional trajectory has centered around illustration, working at various local and international print media establishments, including Revista Ñ and El Cronista. He has additionally contributed specific productions to various marketing campaigns."
+        }
+    },
+    "BOOKS": {
+        "TITLE": "Books",
+        "BOOK_1": {
+            "NAME": "Stories by H.P. Lovecraft",
+            "NAME_2": "Illustrations by Ziperart",
+            "TALE_1": "The Colour Out of Space",
+            "TALE_2": "The Nameless City",
+            "TALE_3": "The Festival",
+            "TALE_4": "The Call of Cthulhu",
+            "DESCRIPTION": "The four stories comprising this book —The Nameless City, The Festival, The Color Out of Space, and The Call of Cthulhu— are the first in the period that has been termed the \"Cthulhu Mythos\", and were written between 1921 and 1935. Here Lovecraft conveys his philosophy of cosmicism: humankind is meaningless in comparison to the forces in the universe—forces we will never recognize nor comprehend. Nevertheless, as he himself once noted in a letter, this philosophical idea pervades his entire body of work: Now all my tales are based on the fundamental premise that common human laws and interests and emotions have no validity or significance in the vast cosmos-at-large.",
+            "SPECS": {
+                "TRANSLATOR": "Translator",
+                "PRICE": "Price",
+                "RELEASE_DATE": "Release date",
+                "LANGUAGE": "Languages",
+                "PAGES": "Pages",
+                "SIZE": "Size",
+                "FORMAT": "Format",
+                "ISBN": "ISBN"
+            },
+            "VALUES": {
+                "LANGUAGE": "Spanish"
+            }
+        }
+    },
+    "SHOPS": {
+        "TITLE": "Point of sales"
+    },
+    "CONTACT": {
+        "TITLE": "Contact",
+        "FIELDS": {
+            "NAME": "Name",
+            "EMAIL": "E-mail",
+            "MSG": "Message"
+        },
+        "BUTTONS": {
+            "SEND": "Send"
+        },
+        "MESSAGES": {
+            "MANDATORY_FIELD": "All fields are mandatory",
+            "EMAIL_FORMAT": "Incorrect email format",
+            "SEND_ERROR": "Error sending email",
+            "SUCCESS": "Message sent. Thank you!"
+        }
     }
-  }
 }

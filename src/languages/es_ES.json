@@ -1,82 +1,103 @@
 {
-  "MENU": "Menú",
-  "MODAL": {
-    "WELCOME": "Hola!",
-    "MORE_INFO": "MÁS INFO!"
-  },
-  "TYPE_EFFECT": {
-    "FIRST": "EDITORIAL",
-    "SECOND": "CUENTOS",
-    "THIRD": "ILUSTRACIONES",
-    "FOURTH": "UNA EXPERIENCIA"
-  },
-  "LOOK_INSIDE": "Miralo por dentro",
-  "HOME": {
-    "TITLE": "Inicio"
-  },
-  "ABOUT_US": {
-    "TITLE": "Nosotros",
-    "CONTENT": "En Avanti tenemos como premisa fundamental el cuidadoso tratamiento de la edición en cada una de las obras literarias. Editamos pensando en la infinidad de recursos que se pueden complementar con la historia que queremos publicar, buscamos conectar dos expresiones. Por un lado los escritos y por el otro las ilustraciones, su conjugación convierten a cada obra en una producción única. Reelaboraremos clásicos, descubriremos nuevos autores. Los ilustradores interpretarán la obra, la concebirán como solo ellos lo pueden hacer. ¿Quién dijo que los libros ilustrados son sólo para niños? En Avanti creemos que en el mundo que vivimos actualmente, los adultos necesitan más que nunca del recurso de las ilustraciones para imaginarse una historia y sumergirse en otra realidad. Queremos brindar todos los recursos posibles para facilitar ese viaje, un viaje imaginario y visual. Bienvenidos!"
-  },
-  "AUTHORS": {
-    "TITLE": "Autores",
-    "AUTHOR_1": {
-      "NAME": "H. P. Lovecraft",
-      "LIFE": "Howard Phillips Lovecraft (Estados Unidos, 1890 - 1937). Escritor de novelas e innumerables cuentos de terror y ciencia ficción. Recreador de una mitología propia que continúa vigente. Su obra es catalogada como un clásico del horror cósmico, una corriente que se aparta de la temática tradicional del terror sobrenatural que incorpora elementos de ciencia ficción. Es considerado uno de los autores más influyentes del siglo XX dentro de la literatura fantástica."
-    }
-  },
-  "ILLUSTRATORS": {
-    "TITLE": "Ilustradores",
-    "SEE_PORTFOLIO": "Ver portfolio",
-    "ILLUSTRATOR_1": {
-      "NAME": "Ziperart",
-      "LIFE": "Ziperart nació en Paraná, Argentina, el 4 de enero de 1976. Vivió hasta los 18 años en Gualeguay, Entre Ríos, para luego trasladarse a Buenos Aires donde reside actualmente. Estudió en la Escuela Nacional de Bellas Artes Prilidiano Pueyrredón. Desarrolló su carrera artística en el campo de la ilustración, trabajando para varios medios gráficos nacionales e internacionales como Revista Ñ y El Cronista. Además realizó producciones específicas para publicidad."
+    "MENU": "Menú",
+    "MODAL": {
+        "WELCOME": "Hola!",
+        "MORE_INFO": "MÁS INFO!"
+    },
+    "TYPE_EFFECT": {
+        "FIRST": "EDITORIAL",
+        "SECOND": "CUENTOS",
+        "THIRD": "ILUSTRACIONES",
+        "FOURTH": "UNA EXPERIENCIA"
+    },
+    "LOOK_INSIDE": "Miralo por dentro",
+    "HOME": {
+        "TITLE": "Inicio"
+    },
+    "ABOUT_US": {
+        "TITLE": "Nosotros",
+        "CONTENT": "En Avanti tenemos como premisa fundamental el cuidadoso tratamiento de la edición en cada una de las obras literarias. Editamos pensando en la infinidad de recursos que se pueden complementar con la historia que queremos publicar, buscamos conectar dos expresiones. Por un lado los escritos y por el otro las ilustraciones, su conjugación convierten a cada obra en una producción única. Reelaboraremos clásicos, descubriremos nuevos autores. Los ilustradores interpretarán la obra, la concebirán como solo ellos lo pueden hacer. ¿Quién dijo que los libros ilustrados son sólo para niños? En Avanti creemos que en el mundo que vivimos actualmente, los adultos necesitan más que nunca del recurso de las ilustraciones para imaginarse una historia y sumergirse en otra realidad. Queremos brindar todos los recursos posibles para facilitar ese viaje, un viaje imaginario y visual. Bienvenidos!"
+    },
+    "AUTHORS": {
+        "TITLE": "Autores",
+        "AUTHOR_1": {
+            "NAME": "H. P. Lovecraft",
+            "LIFE": "Howard Phillips Lovecraft (Estados Unidos, 1890 - 1937). Escritor de novelas e innumerables cuentos de terror y ciencia ficción. Recreador de una mitología propia que continúa vigente. Su obra es catalogada como un clásico del horror cósmico, una corriente que se aparta de la temática tradicional del terror sobrenatural que incorpora elementos de ciencia ficción. Es considerado uno de los autores más influyentes del siglo XX dentro de la literatura fantástica."
+        }
+    },
+    "ILLUSTRATORS": {
+        "TITLE": "Ilustradores",
+        "SEE_PORTFOLIO": "Ver portfolio",
+        "ILLUSTRATOR_1": {
+            "NAME": "Ziperart",
+            "LIFE": "Ziperart nació en Paraná, Argentina, el 4 de enero de 1976. Vivió hasta los 18 años en Gualeguay, Entre Ríos, para luego trasladarse a Buenos Aires donde reside actualmente. Estudió en la Escuela Nacional de Bellas Artes Prilidiano Pueyrredón. Desarrolló su carrera artística en el campo de la ilustración, trabajando para varios medios gráficos nacionales e internacionales como Revista Ñ y El Cronista. Además realizó producciones específicas para publicidad."
 
-    }
-  },
-  "BOOKS": {
-    "TITLE": "Obras",
-    "BOOK_1": {
-      "NAME": "Cuentos de H. P. Lovecraft.",
-      "NAME_2": "Ilustrados por Ziperart",
-      "TALE_1": "El color que cayó del cielo",
-      "TALE_2": "La ciudad sin nombre",
-      "TALE_3": "La ceremonia",
-      "TALE_4": "La llamada de Cthulu",
-      "DESCRIPTION": "Los cuatro cuentos que componen este libro —La ciudad sin nombre, El color que cayó del cielo, La ceremonia y El llamado de Cthulhu— son los primeros relatos de la etapa literaria que se ha denominado “Los mitos de Cthulhu” escritos entre 1925 y 1935. En esta obra, Lovecraft logra desplegar su filosofía cosmicista: la humanidad nada importa ante las fuerzas que operan en el universo, fuerzas que no llegaremos nunca a reconocer ni entender. Sin embargo, y como el autor expresa en una de sus cartas, este concepto era en verdad aplicable a toda su obra: “La premisa fundamental que subyace en todos mis cuentos es que las leyes y los intereses humanos no tienen importancia ni validez alguna en la vastedad del universo”.",
-      "SPECS": {
-        "TRANSLATOR": "Traductor",
-        "PRICE": "Precio",
-        "RELEASE_DATE": "Fecha de Publicación",
-        "LANGUAGE": "Idiomas",
-        "PAGES": "Páginas",
-        "SIZE": "Medidas",
-        "FORMAT": "Formato",
-        "ISBN": "ISBN"
-      },
-      "VALUES": {
-        "LANGUAGE": "Español"
-      }
-    }
-  },
-  "SHOPS": {
-    "TITLE": "Puntos de Venta"
-  },
-  "CONTACT": {
-    "TITLE": "Contacto",
-    "FIELDS": {
-      "NAME": "Nombre",
-      "EMAIL": "E-mail",
-      "MSG": "Mensaje"
+        }
     },
-    "BUTTONS": {
-      "SEND": "Enviar"
+    "BOOKS": {
+        "TITLE": "Obras",
+        "BOOK_1": {
+            "NAME": "Cuentos de H. P. Lovecraft.",
+            "NAME_2": "Ilustrados por Ziperart",
+            "TALE_1": "El color que cayó del cielo",
+            "TALE_2": "La ciudad sin nombre",
+            "TALE_3": "La ceremonia",
+            "TALE_4": "La llamada de Cthulu",
+            "DESCRIPTION": "Los cuatro cuentos que componen este libro —La ciudad sin nombre, El color que cayó del cielo, La ceremonia y El llamado de Cthulhu— son los primeros relatos de la etapa literaria que se ha denominado “Los mitos de Cthulhu” escritos entre 1925 y 1935. En esta obra, Lovecraft logra desplegar su filosofía cosmicista: la humanidad nada importa ante las fuerzas que operan en el universo, fuerzas que no llegaremos nunca a reconocer ni entender. Sin embargo, y como el autor expresa en una de sus cartas, este concepto era en verdad aplicable a toda su obra: “La premisa fundamental que subyace en todos mis cuentos es que las leyes y los intereses humanos no tienen importancia ni validez alguna en la vastedad del universo”.",
+            "SPECS": {
+                "TRANSLATOR": "Traductor",
+                "PRICE": "Precio",
+                "RELEASE_DATE": "Fecha de Publicación",
+                "LANGUAGE": "Idiomas",
+                "PAGES": "Páginas",
+                "SIZE": "Medidas",
+                "FORMAT": "Formato",
+                "ISBN": "ISBN"
+            },
+            "VALUES": {
+                "LANGUAGE": "Español"
+            }
+        },
+        "BOOK_2": {
+            "NAME": "Cuentos de H. P. Lovecraft. II",
+            "NAME_2": "Ilustrados por Ziperart",
+            "TALE_1": "Los sueños en la casa de la bruja",
+            "TALE_2": "La cosa en el umbral",
+            "TALE_3": "El morador de las tinieblas",
+            "DESCRIPTION": "Los tres cuentos que componen este libro —Los sueños en la casa de la bruja, La cosa en el umbral y El morador de las tinieblas— integran la etapa literaria que se ha denominado “Los mitos de Cthulhu” escritos entre 1925 y 1937. En esta obra, ilustrada con auténticos grabados de Ziperart, Lovecraft logra desplegar su filosofía cosmicista: la humanidad nada importa ante las fuerzas que operan en el universo, fuerzas que no llegaremos nunca a reconocer ni entender. Sin embargo, y como el autor expresa en una de sus cartas, este concepto era en verdad aplicable a toda su obra: “La premisa fundamental que subyace en todos mis cuentos es que las leyes y los intereses humanos no tienen importancia ni validez alguna en la vastedad del universo”.",
+            "SPECS": {
+                "TRANSLATOR": "Traductoras",
+                "PRICE": "Precio",
+                "RELEASE_DATE": "Fecha de Publicación",
+                "LANGUAGE": "Idiomas",
+                "PAGES": "Páginas",
+                "SIZE": "Medidas",
+                "FORMAT": "Formato",
+                "ISBN": "ISBN"
+            },
+            "VALUES": {
+                "LANGUAGE": "Español"
+            }
+        }
     },
-    "MESSAGES": {
-      "MANDATORY_FIELD": "Todos los campos son obligatorios",
-      "EMAIL_FORMAT": "Formato de email incorrecto",
-      "SEND_ERROR": "Error al enviar email",
-      "SUCCESS": "Mensaje enviado. Gracias!"
+    "SHOPS": {
+        "TITLE": "Puntos de Venta"
+    },
+    "CONTACT": {
+        "TITLE": "Contacto",
+        "FIELDS": {
+            "NAME": "Nombre",
+            "EMAIL": "E-mail",
+            "MSG": "Mensaje"
+        },
+        "BUTTONS": {
+            "SEND": "Enviar"
+        },
+        "MESSAGES": {
+            "MANDATORY_FIELD": "Todos los campos son obligatorios",
+            "EMAIL_FORMAT": "Formato de email incorrecto",
+            "SEND_ERROR": "Error al enviar email",
+            "SUCCESS": "Mensaje enviado. Gracias!"
+        }
     }
-  }
 }
