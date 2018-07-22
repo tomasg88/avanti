@@ -35,7 +35,7 @@
     },
     "BOOKS": {
         "TITLE": "Books",
-        "BOOK_1": {
+        "LOVECRAFT1": {
             "NAME": "Stories by H.P. Lovecraft",
             "NAME_2": "Illustrations by Ziperart",
             "TALE_1": "The Colour Out of Space",
@@ -43,20 +43,46 @@
             "TALE_3": "The Festival",
             "TALE_4": "The Call of Cthulhu",
             "DESCRIPTION": "The four stories comprising this book —The Nameless City, The Festival, The Color Out of Space, and The Call of Cthulhu— are the first in the period that has been termed the \"Cthulhu Mythos\", and were written between 1921 and 1935. Here Lovecraft conveys his philosophy of cosmicism: humankind is meaningless in comparison to the forces in the universe—forces we will never recognize nor comprehend. Nevertheless, as he himself once noted in a letter, this philosophical idea pervades his entire body of work: Now all my tales are based on the fundamental premise that common human laws and interests and emotions have no validity or significance in the vast cosmos-at-large.",
-            "SPECS": {
-                "TRANSLATOR": "Translator",
-                "PRICE": "Price",
-                "RELEASE_DATE": "Release date",
-                "LANGUAGE": "Languages",
-                "PAGES": "Pages",
-                "SIZE": "Size",
-                "FORMAT": "Format",
-                "ISBN": "ISBN"
-            },
-            "VALUES": {
-                "LANGUAGE": "Spanish"
+            "SPECS_VALUES": {
+                "TRANSLATOR": "Daniela Camozzi",
+                "PRICE": "$ 390,00",
+                "RELEASE_DATE": "July 2017",
+                "LANGUAGE": "Spanish",
+                "PAGES": "112",
+                "SIZE": "20 X 20 cm.",
+                "FORMAT": "Rústica",
+                "ISBN": "978-987-42-4114-6"
             }
-        }
+        },
+        "LOVECRAFT2": {
+            "NAME": "Stories by H. P. Lovecraft. II",
+            "NAME_2": "Illustrations by Ziperart",
+            "TALE_1": "Los sueños en la casa de la bruja",
+            "TALE_2": "La cosa en el umbral",
+            "TALE_3": "El morador de las tinieblas",
+            "TALE_4": "",
+            "DESCRIPTION": "Los tres cuentos que componen este libro —Los sueños en la casa de la bruja, La cosa en el umbral y El morador de las tinieblas— integran la etapa literaria que se ha denominado “Los mitos de Cthulhu” escritos entre 1925 y 1937. En esta obra, ilustrada con auténticos grabados de Ziperart, Lovecraft logra desplegar su filosofía cosmicista: la humanidad nada importa ante las fuerzas que operan en el universo, fuerzas que no llegaremos nunca a reconocer ni entender. Sin embargo, y como el autor expresa en una de sus cartas, este concepto era en verdad aplicable a toda su obra: “La premisa fundamental que subyace en todos mis cuentos es que las leyes y los intereses humanos no tienen importancia ni validez alguna en la vastedad del universo”.",
+            "SPECS_VALUES": {
+                "TRANSLATOR": "Daniela Camozzi, Isadora Paolucci",
+                "PRICE": "$ 520,00",
+                "RELEASE_DATE": "August 2018",
+                "LANGUAGE": "Spanish",
+                "PAGES": "124",
+                "SIZE": "20 X 20 cm.",
+                "FORMAT": "Rústica",
+                "ISBN": "978-987-42-8539-3"
+            }
+        },
+        "SPECS": {
+            "TRANSLATOR": "Translator",
+            "PRICE": "Price",
+            "RELEASE_DATE": "Release date",
+            "LANGUAGE": "Languages",
+            "PAGES": "Pages",
+            "SIZE": "Size",
+            "FORMAT": "Format",
+            "ISBN": "ISBN"
+        },
     },
     "SHOPS": {
         "TITLE": "Point of sales"

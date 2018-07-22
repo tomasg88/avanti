@@ -36,7 +36,7 @@
     },
     "BOOKS": {
         "TITLE": "Obras",
-        "BOOK_1": {
+        "LOVECRAFT1": {
             "NAME": "Cuentos de H. P. Lovecraft.",
             "NAME_2": "Ilustrados por Ziperart",
             "TALE_1": "El color que cayó del cielo",
@@ -44,40 +44,46 @@
             "TALE_3": "La ceremonia",
             "TALE_4": "La llamada de Cthulu",
             "DESCRIPTION": "Los cuatro cuentos que componen este libro —La ciudad sin nombre, El color que cayó del cielo, La ceremonia y El llamado de Cthulhu— son los primeros relatos de la etapa literaria que se ha denominado “Los mitos de Cthulhu” escritos entre 1925 y 1935. En esta obra, Lovecraft logra desplegar su filosofía cosmicista: la humanidad nada importa ante las fuerzas que operan en el universo, fuerzas que no llegaremos nunca a reconocer ni entender. Sin embargo, y como el autor expresa en una de sus cartas, este concepto era en verdad aplicable a toda su obra: “La premisa fundamental que subyace en todos mis cuentos es que las leyes y los intereses humanos no tienen importancia ni validez alguna en la vastedad del universo”.",
-            "SPECS": {
-                "TRANSLATOR": "Traductor",
-                "PRICE": "Precio",
-                "RELEASE_DATE": "Fecha de Publicación",
-                "LANGUAGE": "Idiomas",
-                "PAGES": "Páginas",
-                "SIZE": "Medidas",
-                "FORMAT": "Formato",
-                "ISBN": "ISBN"
-            },
-            "VALUES": {
-                "LANGUAGE": "Español"
+            "SPECS_VALUES": {
+                "TRANSLATOR": "Daniela Camozzi",
+                "PRICE": "$ 390,00",
+                "RELEASE_DATE": "Julio de 2017",
+                "LANGUAGE": "Español",
+                "PAGES": "112",
+                "SIZE": "20 X 20 cm.",
+                "FORMAT": "Rústica",
+                "ISBN": "978-987-42-4114-6"
             }
         },
-        "BOOK_2": {
+        "LOVECRAFT2": {
             "NAME": "Cuentos de H. P. Lovecraft. II",
             "NAME_2": "Ilustrados por Ziperart",
             "TALE_1": "Los sueños en la casa de la bruja",
             "TALE_2": "La cosa en el umbral",
             "TALE_3": "El morador de las tinieblas",
+            "TALE_4": "",
             "DESCRIPTION": "Los tres cuentos que componen este libro —Los sueños en la casa de la bruja, La cosa en el umbral y El morador de las tinieblas— integran la etapa literaria que se ha denominado “Los mitos de Cthulhu” escritos entre 1925 y 1937. En esta obra, ilustrada con auténticos grabados de Ziperart, Lovecraft logra desplegar su filosofía cosmicista: la humanidad nada importa ante las fuerzas que operan en el universo, fuerzas que no llegaremos nunca a reconocer ni entender. Sin embargo, y como el autor expresa en una de sus cartas, este concepto era en verdad aplicable a toda su obra: “La premisa fundamental que subyace en todos mis cuentos es que las leyes y los intereses humanos no tienen importancia ni validez alguna en la vastedad del universo”.",
-            "SPECS": {
-                "TRANSLATOR": "Traductoras",
-                "PRICE": "Precio",
-                "RELEASE_DATE": "Fecha de Publicación",
-                "LANGUAGE": "Idiomas",
-                "PAGES": "Páginas",
-                "SIZE": "Medidas",
-                "FORMAT": "Formato",
-                "ISBN": "ISBN"
-            },
-            "VALUES": {
-                "LANGUAGE": "Español"
+            "SPECS_VALUES": {
+                "TRANSLATOR": "Daniela Camozzi, Isadora Paolucci",
+                "PRICE": "$ 520,00",
+                "RELEASE_DATE": "Agosto de 2018",
+                "LANGUAGE": "Español",
+                "PAGES": "124",
+                "SIZE": "20 X 20 cm.",
+                "FORMAT": "Rústica",
+                "ISBN": "978-987-42-8539-3"
             }
+        },
+        "SPECS_NAMES": {
+            "TRANSLATOR": "Traductoras",
+            "TRANSLATORS": "Traductoras",
+            "PRICE": "Precio",
+            "RELEASE_DATE": "Fecha de Publicación",
+            "LANGUAGE": "Idiomas",
+            "PAGES": "Páginas",
+            "SIZE": "Medidas",
+            "FORMAT": "Formato",
+            "ISBN": "ISBN"
         }
     },
     "SHOPS": {
