@@ -66,7 +66,7 @@ angular.getLanguage = function(separator) {
                         templateUrl: 'views/books.html',
                         controller: 'bookCtlr'
                     })
-                    .when('/books/:id', {
+                    .when('/books/:bookId', {
                         templateUrl: 'views/details/book-details.html',
                         controller: 'bookDetailsCtlr'
                     })
