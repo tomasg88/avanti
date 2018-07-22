@@ -7,12 +7,15 @@
 
 'use strict';
 
-angular.module('avanti').controller('bookDetailsCtlr', ['$scope',
-    function($scope) {
+angular.module('avanti').controller('bookDetailsCtlr',
+['$scope', '$routeParams',
+    function($scope, $routeParams) {
 
         /* PRIVATE FUNCTIONS */
         function init() {
-            // Namespace for holding variables and easier interpretation from the view
+
+            $scope.bookName = $routeParams.bookId.toUpperCase();
+
             $scope.specialStyles = {
                 contenido: {
                     lineHeight: 1.4,
