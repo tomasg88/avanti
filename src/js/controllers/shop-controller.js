@@ -38,12 +38,6 @@ angular.module('avanti').controller('shopsCtlr', ['$scope',
                     phone: '4981-6953'
                 },
                 {
-                    name: 'Caburé Libros',
-                    address: 'México 620',
-                    city: 'C.A.B.A',
-                    phone: '4300-1183'
-                },
-                {
                     name: 'Santiago Arcos Editor',
                     address: 'Puan 481',
                     city: 'C.A.B.A',
