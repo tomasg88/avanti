@@ -1,8 +1,8 @@
-<div class="row no-gutters text-center" ng-controller="bookDetailsCtlr">
+<div class="book-details row no-gutters text-center" ng-controller="bookDetailsCtlr">
 	<div class="col-lg-6 col-md-6 col-sm-6 hidden-xs">
 		<div class="back-degrade-der" ng-style="{'height': windowHeight }">
 			<div class="presentation">
-				<img class="tapa-libro" src="img/tapa.png" alt="">
+				<img class="tapa-libro" ng-src="{{ 'img/' + bookName + '.png' }}" alt="">
 				<gallery></gallery>
 			</div>
 		</div>
@@ -11,10 +11,10 @@
 		<div class="back-solido-oscuro claro" ng-style="{'height': windowHeight }">
 			<div class="row no-gutters">
 				<div class="col-lg-12 text-center">
-					<h2 class="titulo-item" ng-style="specialStyles.tituloItem">
+					<h2 class="titulo-item">
 						{{ "BOOKS." + bookName + ".NAME" | translate }}
 					</h2>
-					<span class="separador" ng-style="specialStyles.contenido"></span>
+					<span class="separador"></span>
 				</div>
 			</div>
 			<div class="row cuentos">
@@ -29,24 +29,24 @@
 			</div>
 			<div class="row no-gutters">
 				<div class="col-lg-12">
-					<span class="separador" ng-style="specialStyles.contenido"></span>
-					<p class="contenido" ng-style="specialStyles.contenido">
+					<span class="separador"></span>
+					<p class="contenido">
 						{{ "BOOKS." + bookName + ".DESCRIPTION" | translate }}
 					</p>
-					<span class="separador" ng-style="specialStyles.contenido"></span>
+					<span class="separador"></span>
 				</div>
 			</div>
 			<div class="row no-gutters">
 				<div class="col-lg-12 text-center">
 					<ul class="container-propiedades-libro">
-						<li class="propiedades-libro" ng-style="specialStyles.propiedadesLibro"><strong>{{ "BOOKS.SPECS_NAMES.TRANSLATOR" | translate }}: </strong>{{ "BOOKS."+ bookName +".SPECS_VALUES.TRANSLATOR" | translate }}</li>
-						<li class="propiedades-libro" ng-style="specialStyles.propiedadesLibro"><strong>{{ "BOOKS.SPECS_NAMES.PRICE" | translate }}: </strong>{{ "BOOKS."+ bookName +".SPECS_VALUES.PRICE" | translate }}</li>
-						<li class="propiedades-libro" ng-style="specialStyles.propiedadesLibro"><strong>{{ "BOOKS.SPECS_NAMES.RELEASE_DATE" | translate }}: </strong>{{ "BOOKS."+ bookName +".SPECS_VALUES.RELEASE_DATE" | translate }}</li>
-						<li class="propiedades-libro" ng-style="specialStyles.propiedadesLibro"><strong>{{ "BOOKS.SPECS_NAMES.LANGUAGE" | translate }}: </strong>{{ "BOOKS."+ bookName +".SPECS_VALUES.LANGUAGE" | translate }}</li>
-						<li class="propiedades-libro" ng-style="specialStyles.propiedadesLibro"><strong>{{ "BOOKS.SPECS_NAMES.PAGES" | translate }}: </strong>{{ "BOOKS."+ bookName +".SPECS_VALUES.PAGES" | translate }}</li>
-						<li class="propiedades-libro" ng-style="specialStyles.propiedadesLibro"><strong>{{ "BOOKS.SPECS_NAMES.SIZE" | translate }}: </strong>{{ "BOOKS."+ bookName +".SPECS_VALUES.SIZE" | translate }}</li>
-						<li class="propiedades-libro" ng-style="specialStyles.propiedadesLibro"><strong>{{ "BOOKS.SPECS_NAMES.FORMAT" | translate }}: </strong>{{ "BOOKS."+ bookName +".SPECS_VALUES.FORMAT" | translate }}</li>
-						<li class="propiedades-libro" ng-style="specialStyles.propiedadesLibro"><strong>{{ "BOOKS.SPECS_NAMES.ISBN" | translate }}: </strong>{{ "BOOKS."+ bookName +".SPECS_VALUES.ISBN" | translate }}</li>
+						<li class="propiedades-libro"><strong>{{ "BOOKS.SPECS_NAMES.TRANSLATOR" | translate }}: </strong>{{ "BOOKS."+ bookName +".SPECS_VALUES.TRANSLATOR" | translate }}</li>
+						<li class="propiedades-libro"><strong>{{ "BOOKS.SPECS_NAMES.PRICE" | translate }}: </strong>{{ "BOOKS."+ bookName +".SPECS_VALUES.PRICE" | translate }}</li>
+						<li class="propiedades-libro"><strong>{{ "BOOKS.SPECS_NAMES.RELEASE_DATE" | translate }}: </strong>{{ "BOOKS."+ bookName +".SPECS_VALUES.RELEASE_DATE" | translate }}</li>
+						<li class="propiedades-libro"><strong>{{ "BOOKS.SPECS_NAMES.LANGUAGE" | translate }}: </strong>{{ "BOOKS."+ bookName +".SPECS_VALUES.LANGUAGE" | translate }}</li>
+						<li class="propiedades-libro"><strong>{{ "BOOKS.SPECS_NAMES.PAGES" | translate }}: </strong>{{ "BOOKS."+ bookName +".SPECS_VALUES.PAGES" | translate }}</li>
+						<li class="propiedades-libro"><strong>{{ "BOOKS.SPECS_NAMES.SIZE" | translate }}: </strong>{{ "BOOKS."+ bookName +".SPECS_VALUES.SIZE" | translate }}</li>
+						<li class="propiedades-libro"><strong>{{ "BOOKS.SPECS_NAMES.FORMAT" | translate }}: </strong>{{ "BOOKS."+ bookName +".SPECS_VALUES.FORMAT" | translate }}</li>
+						<li class="propiedades-libro"><strong>{{ "BOOKS.SPECS_NAMES.ISBN" | translate }}: </strong>{{ "BOOKS."+ bookName +".SPECS_VALUES.ISBN" | translate }}</li>
 					</ul>
 				</div>
 			</div>
