@@ -38,27 +38,21 @@
 
 	<body>
 
-		<!-- Loading -->
-		<!-- <div id="loader" class="back-solido-oscuro loader-screen">
-	    <span class="loader-line"></span>
-	  	</div> -->
-
 		<!-- Main-content -->
 		<div class="container-fluid" my-resize>
 
-			<!-- Modal -->
-			<!-- <div id="modal" class="shadow" ng-include="'/views/includes/modal.html'">
-			</div> -->
+			<!-- Loading -->
+			<div id="loader" class="back-solido-oscuro loader-screen">
+				<span class="loader-line"></span>
+			</div>
+
+			<div top-links ng-class="{'animate-down': !home}"> </div>
 
 			<ng-view></ng-view>
 
-		</div>
+			<!-- Menu aux -->
+			<div aux-menu ng-class="{'animate-up': !home}"> </div>
 
-		<!-- Contenido flotante -->
-		<div aux-menu ng-class="{'animate-up': !home}">
-		</div>
-
-		<div top-links ng-class="{'animate-down': !home}">
 		</div>
 
 	</body>
