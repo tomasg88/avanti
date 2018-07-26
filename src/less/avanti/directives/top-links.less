@@ -1,14 +1,15 @@
 // Estilos para directiva top-links
 //-------------------------------------
 .top-links {
-    position: fixed;
+    position: absolute;
     top: -12%;
     left: 0;
     width: 98%;
     margin-left: 1%;
     transition: all .3s ease-in-out;
+    z-index: 1;
     &.animate-down {
-        transform: translate(0px, 90px);
+        transform: translate(0px, 20px);
     }
     .home-link {
         opacity: 0.4;
