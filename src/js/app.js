@@ -35,7 +35,8 @@ angular.getLanguage = function(separator) {
             'ngRoute',
             'ngSanitize',
             'ngTouch',
-            'pascalprecht.translate'
+            'pascalprecht.translate',
+            'ui.bootstrap'
         ])
         .config(['$routeProvider', '$translateProvider',
             function($routeProvider, $translateProvider) {
@@ -88,8 +89,8 @@ angular.getLanguage = function(separator) {
                     .useSanitizeValueStrategy('escape');
             }
         ])
-        .run(['$rootScope', '$location', '$window', '$timeout',
-            function($rootScope, $location, $window, $timeout) {
+        .run(['$rootScope', '$location', '$window', '$timeout', '$uibModal',
+            function($rootScope, $location, $window, $timeout, $uibModal) {
 
                 $rootScope.showLoader = true;
                 $rootScope.windowHeight = '';
@@ -119,6 +120,15 @@ angular.getLanguage = function(separator) {
                 $timeout(function() {
                     $rootScope.showLoader = false;
                 }, 5000);
+
+                $timeout(function() {
+                    $uibModal.open({
+                        animation: true,
+                        templateUrl: 'slide.html',
+                        controller: 'ModalController'
+                    });
+                }, 6000);
+
             }
         ]);
 })();

@@ -28,6 +28,9 @@
 		<script src="libs/ng/angular-translate.min.js"></script>
 		<script src="libs/ng/angular-translate-loader-static-files.min.js"></script>
 
+		<script type="text/javascript" src="libs/bootstrap-ui/ui-bootstrap-custom-2.5.0.js"> </script>
+		<script type="text/javascript" src="libs/bootstrap-ui/ui-bootstrap-custom-tpls-2.5.0.js"> </script>
+
 		<!-- Others -->
 		<script src="libs/typed/typed.js"></script>
 
@@ -41,6 +44,22 @@
 		<!-- Loading -->
 		<div class="back-solido-oscuro loader" ng-class="{'hide': !showLoader}">
 			<img src="img/logoblanco.png" alt="">
+		</div>
+
+		<div class="">
+			<script type="text/ng-template" id="slide.html">
+				<div class="contenido-modal" ng-controller="ModalController">
+			        <div class="modal-header">
+			            <h3 class="modal-title" id="modal-title">I'm a modal!</h3>
+			        </div>
+			        <div class="modal-body" id="modal-body">
+
+			        </div>
+			        <div class="modal-footer">
+			            <button class="btn btn-primary" type="button" ng-click="close()">OK</button>
+			        </div>
+		        </div>
+		    </script>
 		</div>
 
 		<!-- Main-content -->

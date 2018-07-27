@@ -56,6 +56,8 @@
                     }
                 }
                 scope.DoIt = function(target) {
+                    console.log('Item: ', $.global.item);
+                    console.log('Direction: ', target);
                     var windowwidth = $(window).width();
                     var margin = windowwidth * target;
                     var actualtarget = target + 1;
