@@ -18,7 +18,9 @@
         return {
             restrict: 'EA',
             templateUrl: 'views/directives/gallery.html',
-            scope: {},
+            scope: {
+                bookName: '='
+            },
             link: function(scope, elem, attr, ctrl) {
                 $.global = {};
                 scope.openPresentation = function() {
