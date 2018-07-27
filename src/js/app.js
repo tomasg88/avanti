@@ -91,6 +91,7 @@ angular.getLanguage = function(separator) {
         .run(['$rootScope', '$location', '$window', '$timeout',
             function($rootScope, $location, $window, $timeout) {
 
+                $rootScope.showLoader = true;
                 $rootScope.windowHeight = '';
                 $rootScope.home = true;
                 $rootScope.main = {};
@@ -116,8 +117,8 @@ angular.getLanguage = function(separator) {
                 }
 
                 $timeout(function() {
-                    $('#loader').hide();
-                }, 10000);
+                    $rootScope.showLoader = false;
+                }, 5000);
             }
         ]);
 })();

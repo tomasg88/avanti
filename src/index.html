@@ -38,13 +38,13 @@
 
 	<body>
 
-		<!-- Main-content -->
-		<div class="container-fluid" my-resize>
+		<!-- Loading -->
+		<div class="back-solido-oscuro loader" ng-class="{'hide': !showLoader}">
+			<img src="img/logoblanco.png" alt="">
+		</div>
 
-			<!-- Loading -->
-			<div class="back-solido-oscuro loader">
-				<span class="loader-line"></span>
-			</div>
+		<!-- Main-content -->
+		<div class="container-fluid" my-resize ng-if="!showLoader">
 
 			<div top-links ng-class="{'animate-down': !home}"> </div>
 
