@@ -56,7 +56,6 @@
                     }
                 }
                 scope.DoIt = function(target) {
-                    console.log('Item: ', $.global.item);
                     console.log('Direction: ', target);
                     var windowwidth = $(window).width();
                     var margin = windowwidth * target;
@@ -87,7 +86,7 @@
                 $('#btnClose').bind('click', function() {
                     scope.closePresentation();
                 });
-                $(document).on("keydown", function(e) {
+                elem.on("keydown", function(e) {
                     if ($.global.open) {
                         switch (e.keyCode) {
                             case 37:
