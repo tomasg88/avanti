@@ -89,8 +89,8 @@ angular.getLanguage = function(separator) {
                     .useSanitizeValueStrategy('escape');
             }
         ])
-        .run(['$rootScope', '$location', '$window', '$timeout', '$uibModal',
-            function($rootScope, $location, $window, $timeout, $uibModal) {
+        .run(['$rootScope', '$location', '$window', '$timeout', '$uibModal', '$document',
+            function($rootScope, $location, $window, $timeout, $uibModal, $document) {
 
                 $rootScope.showLoader = true;
                 $rootScope.windowHeight = '';
@@ -122,10 +122,15 @@ angular.getLanguage = function(separator) {
                 }, 5000);
 
                 $timeout(function() {
+                    var parentSelector, size;
+                    var parentElem = angular.element($document[0].querySelector('.modal-demo'));
                     $uibModal.open({
                         animation: true,
-                        templateUrl: 'slide.html',
-                        controller: 'ModalController'
+                        templateUrl: 'myModalContent.html',
+                        controller: 'ModalController',
+                        size: 'lg',
+                        // backdrop: true,
+                        appendTo: parentElem
                     });
                 }, 6000);
 

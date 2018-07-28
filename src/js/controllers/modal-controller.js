@@ -1,12 +1,12 @@
 'use strict';
 
 angular.module('avanti').controller('ModalController',
-['$scope', '$uibModalInstance',
-    function($scope, $uibModalInstance) {
+['$timeout', '$uibModalInstance',
+    function($timeout, $uibModalInstance) {
 
-        $scope.close = function() {
+        $timeout(function() {
             $uibModalInstance.close();
-        }
+        }, 3000);
 
     }
 ]);
