@@ -128,9 +128,7 @@ angular.getLanguage = function(separator) {
                         animation: true,
                         templateUrl: 'myModalContent.html',
                         controller: 'ModalController',
-                        size: 'lg',
-                        // backdrop: true,
-                        appendTo: parentElem
+                        size: 'lg'
                     });
                 }, 6000);
 
