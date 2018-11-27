@@ -1,44 +1,46 @@
-/**
- * @ngdoc overview
- * @name avanti.myResize
- * @description
- *
- * Ajusta la pantalla si el usuario resizea la pantalla
- */
 
 'use strict';
 
-angular.module('avanti').directive('myResize', ['$window',
-    function($window) {
-        return {
-            link: function(scope, el, attr, ctrl) {
-                var w = angular.element($window);
+angular.module('avanti').directive('onResize',
+['$rootScope', '$window', 'BREAKPOINTS',
+	function ($rootScope, $window, BREAKPOINTS) {
+		return {
+			restrict: 'A',
+			link: function (scope, el, attr, ctrl) {
+				// Breakpoint values match values defined in Bootstrap
+				var breakpoints = {
+					xs: 480,
+					sm: 768,
+					md: 992,
+					lg: 1200
+				}
 
-                scope.getWindowDimensions = function() {
-                    return {
-                        'h': w.height(),
-                        'w': w.width()
-                    };
-                };
+				angular.element($window).bind('resize', function(){
 
-                scope.$watch(scope.getWindowDimensions,
-                    function(newValue, oldValue) {
-                        scope.windowHeight = newValue.h;
-                        scope.windowWidth = newValue.w;
-                        scope.style = function() {
-                            return {
-                                'height': (newValue.h - 100) + 'px',
-                                'width': (newValue.w - 100) + 'px'
-                            };
-                        };
-                    },
-                    true
-                );
+					// Reset breakpoint flags
+					BREAKPOINTS.isExtraSmall = BREAKPOINTS.isSmall = BREAKPOINTS.isMedium = BREAKPOINTS.isLarge = false;
 
-                w.bind('resize', function(event) {
-                    scope.$apply();
-                });
-            }
-        };
-    }
+					// Get window width
+					scope.width = $window.innerWidth;
+
+					// Evaluate size and set proper flag
+					if (scope.width <= breakpoints.sm) {
+						BREAKPOINTS.isExtraSmall = true;
+					} else if (scope.width > breakpoints.sm && scope.width <= breakpoints.md) {
+						BREAKPOINTS.isSmall = true;
+					} else if (scope.width > breakpoints.md && scope.width <= breakpoints.lg) {
+						BREAKPOINTS.isMedium = true;
+					} else if (scope.width > breakpoints.md) {
+						BREAKPOINTS.isLarge = true;
+					}
+
+					$rootScope.breakpoints = BREAKPOINTS;
+
+					// Trigger digest cycle as 'resize' event is not an Angular event.
+					scope.$digest();
+				});
+
+			}
+		};
+	}
 ]);
