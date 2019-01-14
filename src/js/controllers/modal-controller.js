@@ -6,7 +6,7 @@ angular.module('avanti').controller('ModalController',
 
         $timeout(function() {
             $uibModalInstance.close();
-        }, 3000);
+        }, 5000);
 
     }
 ]);

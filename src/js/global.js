@@ -8,3 +8,4 @@ angular.module('avanti')
     	isSmall: window.innerWidth > 768 && window.innerWidth <= 992,
     	isExtraSmall: window.innerWidth <= 768
     })
+    .constant('ANIMATION_CLICK_COUNTER', 4)
