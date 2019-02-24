@@ -3,38 +3,73 @@
 */
 
 angular.module('avanti').directive('animations',
-['$document', '$timeout', '$uibModal', 'BREAKPOINTS', 'ANIMATION_CLICK_COUNTER',
-    function ($document, $timeout, $uibModal, BREAKPOINTS, ANIMATION_CLICK_COUNTER) {
+['$document', '$timeout', '$interval', 'BREAKPOINTS', 'ANIMATIONS',
+    function ($document, $timeout, $interval, BREAKPOINTS, ANIMATIONS) {
         return {
             restrict: 'EA',
+            replace: true,
+            templateUrl: 'views/directives/animations.html',
             link: function(scope, elem, attr, ctrl) {
 
-                var clickCounter = 0, triggered = 0;
-                var imagesPath = [
-                    'img/illustrations/1.png',
-                    'img/illustrations/2.png'
-                ]
-                scope.illustration = '';
+                var clickCounter = 0,
+                    HTMLElement = '<img class="illustration" src="_IMG_" />',
+                    path = 'img/illustrations/', ext = '.jpg',
+                    totalImages = 6, lastImage;
 
-                $document.on('click', function() {
-                    clickCounter++;
-                    if (clickCounter >= ANIMATION_CLICK_COUNTER) {
-                        triggerModal(imagesPath[1]);
-                        clickCounter = 0;
-                    }
-                });
+                scope.showImg = false;
 
-                function getImages() {
-
+                // For mobile, animation is triggered automatically
+                // For web, triggers after 4 user clicks
+                if (BREAKPOINTS.isExtraSmall) {
+                    path = path + 'portrait/'
+                    $interval(function() {
+                        show(nextImage());
+                    }, ANIMATIONS.mobileInterval);
+                } else {
+                    path = path + 'landscape/'
+                    $document.on('click', function() {
+                        clickCounter++;
+                        if (clickCounter >= ANIMATIONS.clickCounter) {
+                            show(nextImage());
+                            clickCounter = 0;
+                        }
+                    });
                 }
 
-                function triggerModal(img) {
-                    $uibModal.open({
-                        animation: true,
-                        template: '<img class="slide" style="width:100%" src="' + img + '" />',
-                        controller: 'ModalController',
-                        size: 'md'
-                    });
+                function nextImage() {
+                    var newImage = Math.floor(Math.random() * 6) + 1,
+                        result;
+                    if (newImage === lastImage) {
+                        return nextImage();
+                    } else {
+                        lastImage = newImage;
+                        return path + newImage + ext;
+                    }
+                }
+
+                // Add HTML element
+                function show(img) {
+                    // Concatenate image path
+                    var element = HTMLElement.replace('_IMG_', img);
+
+                    // Show container with transition effect
+                    scope.showImg = true;
+                    elem.append(element);
+                    if (!BREAKPOINTS.isExtraSmall) {
+                        scope.$digest();
+                    }
+
+                    // Trigger close
+                    $timeout(close, ANIMATIONS.ttl);
+                }
+
+                // Delete HTML element
+                function close() {
+                    scope.showImg = false;
+                    elem.empty();
+                    if (!BREAKPOINTS.isExtraSmall) {
+                        scope.$digest();
+                    }
                 }
 
             }

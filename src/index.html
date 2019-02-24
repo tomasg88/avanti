@@ -39,7 +39,7 @@
 
 	</head>
 
-	<body animations>
+	<body>
 
 		<!-- Loading -->
 		<div class="background back-solido-oscuro loader" ng-class="{'hide': !showLoader}">
@@ -58,8 +58,10 @@
 		<div class="container-fluid" on-resize ng-if="!showLoader">
 
 			<div top-links ng-class="{'animate-down': !home}"> </div>
-
+			
 			<ng-view></ng-view>
+
+			<animations></animations>
 
 			<!-- Menu aux -->
 			<div aux-menu ng-class="{'animate-up': !home}"> </div>

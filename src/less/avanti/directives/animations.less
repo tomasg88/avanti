@@ -1,0 +1,32 @@
+/*
+ * Styles for 'animations' directive
+ */
+
+.illustration-container {
+
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+    &.appear {
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .illustration {
+        width: 100%;
+        position: absolute;
+        top: -10%;
+    }
+}
+
+//
+// Responsive
+//
+@media (min-width: @screen-xxs) and (max-width: @screen-xxs-max) {
+    .illustration-container {
+        .illustration {
+            top: 0;
+            height: 100vh;
+        }
+    }
+}
