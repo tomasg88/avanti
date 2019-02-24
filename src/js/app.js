@@ -78,6 +78,10 @@ angular.getLanguage = function(separator) {
                     .when('/contact', {
                         templateUrl: 'views/contact.html',
                         controller: 'contactCtlr'
+                    })
+                    .when('/download', {
+                        templateUrl: 'views/download.html',
+                        controller: 'downloadCtlr'
                     });
 
                 $translateProvider
@@ -103,7 +107,8 @@ angular.getLanguage = function(separator) {
                     illustrators: 'ILLUSTRATORS',
                     books: 'BOOKS',
                     shops: 'SHOPS',
-                    contact: 'CONTACT'
+                    contact: 'CONTACT',
+                    downloads: 'DOWNLOADS'
                 }
 
                 $rootScope.redirectTo = function(target) {

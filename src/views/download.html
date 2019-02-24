@@ -1,0 +1,29 @@
+<div class="row no-gutters text-center" ng-controller="downloadCtlr">
+	<div class="col-lg-12 col-md-12 col-sm-12">
+		<div class="background back-degrade-sup altura-full">
+			<span class="indicador oscuro">
+				<p>D</p>
+			</span>
+			<h1 class="titulo-seccion" style="margin-top: 2%; margin-bottom: 0;">
+				{{ "DOWNLOADS.TITLE" | translate }}
+			</h1>
+			<span class="separador"></span>
+
+			<div class="row no-gutters">
+				<div class="col-lg-4 col-md-4 col-sm-4 titulo-item" ng-click="openDownloadRequest()">
+					<h2>{{ "DOWNLOADS.WALLPAPERS" | translate }}</h2>
+
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4 titulo-item">
+					<h2>{{ "DOWNLOADS.TALES" | translate }}</h2>
+
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4 titulo-item">
+					<h2>{{ "DOWNLOADS.AUDIOS" | translate }}</h2>
+
+				</div>
+			</div>
+			<span class="separador"></span>
+		</div>
+	</div>
+</div>

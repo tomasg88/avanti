@@ -103,5 +103,18 @@
             "SEND_ERROR": "Error sending email",
             "SUCCESS": "Message sent. Thank you!"
         }
+    },
+    "DOWNLOADS": {
+        "TITLE": "Downloads",
+        "WALLPAPERS": "Wallpapers",
+        "TALES": "Tales",
+        "AUDIOS": "Audios",
+        "FORM": {
+            "NAME": "Name",
+            "SURNAME": "Surname",
+            "COUNTRY": "Country",
+            "CITY": "City",
+            "EMAIL": "EMail"
+        }
     }
 }

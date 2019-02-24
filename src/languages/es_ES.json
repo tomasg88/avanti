@@ -105,5 +105,18 @@
             "SEND_ERROR": "Error al enviar email",
             "SUCCESS": "Mensaje enviado. Gracias!"
         }
+    },
+    "DOWNLOADS": {
+        "TITLE": "Descargas",
+        "WALLPAPERS": "Fondos de pantalla",
+        "TALES": "Cuentos",
+        "AUDIOS": "Audios",
+        "FORM": {
+            "NAME": "Nombre",
+            "SURNAME": "Apellido",
+            "COUNTRY": "País",
+            "CITY": "Ciudad",
+            "EMAIL": "E-mail"
+        }
     }
 }

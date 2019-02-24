@@ -40,6 +40,10 @@
 							<a href ng-if="!isMobile" >{{ getInitial(getTranslated(main.sections.contact)) }}</a>
 							<a href ng-if="isMobile" >{{ getTranslated(main.sections.contact).toUpperCase() }}</a>
 						</span>
+						<span class="opcion st6" ng-mouseenter="selectThis(main.sections.downloads)" ng-mouseleave="selectThis('')" ng-click="redirectTo('/download')">
+							<a href ng-if="!isMobile" >{{ getInitial(getTranslated(main.sections.downloads)) }}</a>
+							<a href ng-if="isMobile" >{{ getTranslated(main.sections.downloads).toUpperCase() }}</a>
+						</span>
 						<div class="opcion-seleccionada">
 							<h4 ng-bind-html="getTranslated(selectedOption)"></h4>
 						</div>
