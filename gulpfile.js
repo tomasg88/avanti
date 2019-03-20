@@ -1,19 +1,21 @@
 // -----------------------------------------------------
 // Requires
 // -----------------------------------------------------
-var del = require('del');
-var os = require('os');
-var path = require('path');
-var gulp = require('gulp');
+var chalk = require('chalk');
 var concat = require('gulp-concat');
 var csso = require('gulp-csso');
+var del = require('del');
+var gulp = require('gulp');
 var jsonMinify = require('gulp-jsonminify');
 var less = require('gulp-less');
+var log = require('fancy-log');
+var os = require('os');
+var path = require('path');
 var releaseTasks = require('gulp-release-tasks');
 var rename = require('gulp-rename');
+var seq = require('run-sequence');
 var uglify = require('gulp-uglify');
 var webServer = require('gulp-webserver');
-var seq = require('run-sequence');
 
 /* Dev tasks */
 var jsbeautifier = require('gulp-jsbeautifier');
@@ -128,6 +130,10 @@ gulp.task('js', function() {
     return gulp.src(GLOBS.js)
         .pipe(concat('avanti.min.js'))
         .pipe(uglify())
+        .on('error', function(uglify) {
+            log.error('Error uglifying', chalk.red(uglify.fileName))
+            log.error('\tat', chalk.magenta(uglify.line + ':'), chalk.red(uglify.message));
+        })
         .pipe(gulp.dest(path.join(GLOBS.output, 'js')));
 });
 
@@ -147,6 +153,25 @@ gulp.task('serve', function() {
 // --------------------------------------------------------
 gulp.task('watch', function() {
     gulp.watch('src/**/*', ['build']);
+});
+
+//=======================================================================
+// Watchers
+//=======================================================================
+gulp.task('watch', function() {
+	var watchLog = function(event) {
+		log(chalk.gray.italic('File ' + event.path + ' was ' + event.type + ', running tasks...'));
+	};
+
+	gulp.watch(GLOBS.languages, ['languages']).on('change', watchLog);
+	gulp.watch(GLOBS.views, ['copy:views']).on('change', watchLog);
+	gulp.watch(GLOBS.libs, ['copy:libs']).on('change', watchLog);
+	gulp.watch(GLOBS.js, ['js']).on('change', watchLog);
+	// gulp.watch(GLOBS.jsLogin, ['js:login']).on('change', watchLog);
+	gulp.watch(GLOBS.less, ['css']).on('change', watchLog);
+	// gulp.watch(GLOBS.html, ['copy:html']).on('change', watchLog);
+	// gulp.watch(GLOBS.videoPlayer, ['copy:videoPlayer']).on('change', watchLog);
+	// gulp.watch(GLOBS.icons, ['icons']).on('change', watchLog);
 });
 
 // --------------------------------------------------------
