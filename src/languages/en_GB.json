@@ -82,7 +82,7 @@
             "SIZE": "Size",
             "FORMAT": "Format",
             "ISBN": "ISBN"
-        },
+        }
     },
     "SHOPS": {
         "TITLE": "Point of sales"
