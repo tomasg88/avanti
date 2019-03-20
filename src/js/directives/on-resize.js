@@ -35,7 +35,7 @@ angular.module('avanti').directive('onResize',
 					}
 
 					$rootScope.breakpoints = BREAKPOINTS;
-
+					console.log('Breakpoints: ', $rootScope.breakpoints);
 					// Trigger digest cycle as 'resize' event is not an Angular event.
 					scope.$digest();
 				});

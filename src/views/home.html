@@ -17,32 +17,32 @@
 				<div class="col-lg-12">
 					<div id="menu" class="menu">
 						<span class="opcion st0" ng-mouseenter="selectThis(main.sections.aboutUs)" ng-mouseleave="selectThis('')" ng-click="redirectTo('/about-us')">
-							<a href ng-if="!isMobile" >{{ getInitial(getTranslated(main.sections.aboutUs)) }}</a>
-							<a href ng-if="isMobile" >{{ getTranslated(main.sections.aboutUs).toUpperCase() }}</a>
+							<a href ng-if="!breakpoints.isExtraSmall" >{{ getInitial(getTranslated(main.sections.aboutUs)) }}</a>
+							<a href ng-if="breakpoints.isExtraSmall" >{{ getTranslated(main.sections.aboutUs).toUpperCase() }}</a>
 						</span>
 						<span class="opcion st1" ng-mouseenter="selectThis(main.sections.authors)" ng-mouseleave="selectThis('')" ng-click="redirectTo('/authors')">
-							<a href ng-if="!isMobile" >{{ getInitial(getTranslated(main.sections.authors)) }}</a>
-							<a href ng-if="isMobile" >{{ getTranslated(main.sections.authors).toUpperCase() }}</a>
+							<a href ng-if="!breakpoints.isExtraSmall" >{{ getInitial(getTranslated(main.sections.authors)) }}</a>
+							<a href ng-if="breakpoints.isExtraSmall" >{{ getTranslated(main.sections.authors).toUpperCase() }}</a>
 						</span>
 						<span class="opcion st2" ng-mouseenter="selectThis(main.sections.illustrators)" ng-mouseleave="selectThis('')" ng-click="redirectTo('/illustrators')">
-							<a href ng-if="!isMobile" >{{ getInitial(getTranslated(main.sections.illustrators)) }}</a>
-							<a href ng-if="isMobile" >{{ getTranslated(main.sections.illustrators).toUpperCase() }}</a>
+							<a href ng-if="!breakpoints.isExtraSmall" >{{ getInitial(getTranslated(main.sections.illustrators)) }}</a>
+							<a href ng-if="breakpoints.isExtraSmall" >{{ getTranslated(main.sections.illustrators).toUpperCase() }}</a>
 						</span>
 						<span class="opcion st3" ng-mouseenter="selectThis(main.sections.books)" ng-mouseleave="selectThis('')" ng-click="redirectTo('/books')">
-							<a href ng-if="!isMobile" >{{ getInitial(getTranslated(main.sections.books)) }}</a>
-							<a href ng-if="isMobile" >{{ getTranslated(main.sections.books).toUpperCase() }}</a>
+							<a href ng-if="!breakpoints.isExtraSmall" >{{ getInitial(getTranslated(main.sections.books)) }}</a>
+							<a href ng-if="breakpoints.isExtraSmall" >{{ getTranslated(main.sections.books).toUpperCase() }}</a>
 						</span>
 						<span class="opcion st4" ng-mouseenter="selectThis(main.sections.shops)" ng-mouseleave="selectThis('')" ng-click="redirectTo('/shops')">
-							<a href ng-if="!isMobile" >{{ getInitial(getTranslated(main.sections.shops)) }}</a>
-							<a href ng-if="isMobile" >{{ getTranslated(main.sections.shops).toUpperCase() }}</a>
+							<a href ng-if="!breakpoints.isExtraSmall" >{{ getInitial(getTranslated(main.sections.shops)) }}</a>
+							<a href ng-if="breakpoints.isExtraSmall" >{{ getTranslated(main.sections.shops).toUpperCase() }}</a>
 						</span>
 						<span class="opcion st5" ng-mouseenter="selectThis(main.sections.contact)" ng-mouseleave="selectThis('')" ng-click="redirectTo('/contact')">
-							<a href ng-if="!isMobile" >{{ getInitial(getTranslated(main.sections.contact)) }}</a>
-							<a href ng-if="isMobile" >{{ getTranslated(main.sections.contact).toUpperCase() }}</a>
+							<a href ng-if="!breakpoints.isExtraSmall" >{{ getInitial(getTranslated(main.sections.contact)) }}</a>
+							<a href ng-if="breakpoints.isExtraSmall" >{{ getTranslated(main.sections.contact).toUpperCase() }}</a>
 						</span>
 						<span class="opcion st6" ng-mouseenter="selectThis(main.sections.downloads)" ng-mouseleave="selectThis('')" ng-click="redirectTo('/download')">
-							<a href ng-if="!isMobile" >{{ getInitial(getTranslated(main.sections.downloads)) }}</a>
-							<a href ng-if="isMobile" >{{ getTranslated(main.sections.downloads).toUpperCase() }}</a>
+							<a href ng-if="!breakpoints.isExtraSmall" >{{ getInitial(getTranslated(main.sections.downloads)) }}</a>
+							<a href ng-if="breakpoints.isExtraSmall" >{{ getTranslated(main.sections.downloads).toUpperCase() }}</a>
 						</span>
 						<div class="opcion-seleccionada">
 							<h4 ng-bind-html="getTranslated(selectedOption)"></h4>

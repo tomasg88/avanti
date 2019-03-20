@@ -8,13 +8,12 @@
 'use strict';
 
 angular.module('avanti').controller('homeCtlr',
-['$scope', '$rootScope', '$filter', '$sanitize', 'BROWSER',
-    function($scope, $rootScope, $filter, $sanitize, BROWSER) {
+['$scope', '$rootScope', '$filter', '$sanitize',
+    function($scope, $rootScope, $filter, $sanitize) {
 
         /* PRIVATE FUNCTIONS */
         function init() {
             $scope.selectedOption = '';
-            $scope.isMobile = BROWSER.isMobile;
         }
 
         /* PUBLIC FUNCTIONS */
