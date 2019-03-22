@@ -116,7 +116,10 @@
             "SURNAME": "Apellido",
             "COUNTRY": "País",
             "CITY": "Ciudad",
-            "EMAIL": "E-mail"
+            "EMAIL": "E-mail",
+            "VALIDATION_MSGS": {
+
+            }
         }
     }
 }

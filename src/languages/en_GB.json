@@ -114,7 +114,10 @@
             "SURNAME": "Surname",
             "COUNTRY": "Country",
             "CITY": "City",
-            "EMAIL": "EMail"
+            "EMAIL": "EMail",
+            "VALIDATION_MSGS": {
+
+            }
         }
     }
 }
