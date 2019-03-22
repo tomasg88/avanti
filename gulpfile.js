@@ -17,16 +17,6 @@ var seq = require('run-sequence');
 var uglify = require('gulp-uglify');
 var webServer = require('gulp-webserver');
 
-/* Dev tasks */
-var jsbeautifier = require('gulp-jsbeautifier');
-gulp.task('codebeautifier', function() {
-    gulp.src(['src/less/**/*.less'])
-        .pipe(jsbeautifier({
-            "indent_size": 4,
-            "indent_char": ' ',
-        }))
-        .pipe(gulp.dest('src/less/'));
-});
 
 // -----------------------------------------------------
 // Globals
