@@ -91,7 +91,7 @@
         "TITLE": "Contact",
         "FIELDS": {
             "NAME": "Name",
-            "EMAIL": "E-mail",
+            "EMAIL": "E-Mail",
             "MSG": "Message"
         },
         "BUTTONS": {
@@ -114,9 +114,10 @@
             "SURNAME": "Surname",
             "COUNTRY": "Country",
             "CITY": "City",
-            "EMAIL": "EMail",
+            "EMAIL": "E-Mail",
             "VALIDATION_MSGS": {
-
+                "REQUIRED_FIELD": "Field required",
+                "EMAIL_FORMAT": "Incorrect email format"
             }
         }
     }

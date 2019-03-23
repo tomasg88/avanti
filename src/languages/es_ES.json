@@ -118,7 +118,8 @@
             "CITY": "Ciudad",
             "EMAIL": "E-mail",
             "VALIDATION_MSGS": {
-
+                "REQUIRED_FIELD": "Campo requerido",
+                "EMAIL_FORMAT": "Formato de email incorrecto"
             }
         }
     }

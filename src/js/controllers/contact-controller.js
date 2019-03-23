@@ -18,6 +18,7 @@ angular.module('avanti').controller('contactCtlr', ['$scope', 'Email',
             $scope.form.name = '';
             $scope.form.email = '';
             $scope.form.msg = '';
+            $scope.form.subject = 'contact';
         }
 
         function validateForm() {

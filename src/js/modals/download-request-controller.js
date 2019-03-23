@@ -5,8 +5,8 @@
 'use strict';
 
 angular.module('avanti').controller('DownloadRequestModalController',
-['$uibModalInstance', '$scope', '$timeout', 'Email', 'resourceId',
-    function ($uibModalInstance, $scope, $timeout, Email, resourceId) {
+['$uibModalInstance', '$scope', '$timeout', '$filter', 'Email', 'resourceId',
+    function ($uibModalInstance, $scope, $timeout, $filter, Email, resourceId) {
 
         var WALLPAPERS_PREFIX = "Avanti-WP-",
             WALLPAPERS_PATH = "assets/wp/",
@@ -29,38 +29,78 @@ angular.module('avanti').controller('DownloadRequestModalController',
                 }
             }
 
-            console.log('A descargar: ', $scope.downloadObject);
-
             $scope.user = {
                 name: '',
                 surname: '',
                 email: '',
                 country: '',
                 city: '',
-                resource: $scope.downloadObject.name
+                resource: $scope.downloadObject.name,
+                subject: 'download'
             }
 
+            $scope.errors = {
+                name: false,
+                surname: false,
+                email: false,
+                country: false,
+                city: false
+            }
+            $scope.emailError = "";
+
+        }
+
+        function resetErrors() {
+            $scope.errors.name = $scope.errors.surname = $scope.errors.country = $scope.errors.email = $scope.errors.city = false;
+            $scope.emailError = "";
         }
 
         function validateForm() {
             var emailRegEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            var result = false;
-            if ($scope.user.name.trim() === "" || $scope.user.email.trim() === "") {
-                $scope.hasMessage = true;
-                $scope.messageText = 'DOWNLOADS.FORM.VALIDATION_MSGS';
+            var result = true;
+
+            resetErrors()
+
+            // Name
+            if ($scope.user.name.trim() === "") {
+                $scope.errors.name = true;
                 result = false;
             }
 
-            if (!emailRegEx.test($scope.user.email.trim())) {
-                $scope.hasMessage = true;
-                $scope.messageText = 'DOWNLOADS.FORM.VALIDATION_MSGS';
+            // Surname
+            if ($scope.user.surname.trim() === "") {
+                $scope.errors.surname = true;
                 result = false;
             }
-            return true;
+
+            // Email
+            console.log($scope.user.email);
+            if ($scope.user.email.trim() === "") {
+                $scope.errors.email = true;
+                $scope.emailError = $filter('translate')('DOWNLOADS.FORM.VALIDATION_MSGS.REQUIRED_FIELD');
+                result = false;
+            } else if (!emailRegEx.test($scope.user.email.trim())) {
+                $scope.errors.email = true;
+                $scope.emailError = $filter('translate')('DOWNLOADS.FORM.VALIDATION_MSGS.EMAIL_FORMAT');
+                result = false;
+            }
+
+            // Country
+            if ($scope.user.country.trim() === "") {
+                $scope.errors.country = true;
+                result = false;
+            }
+
+            // City
+            if ($scope.user.city.trim() === "") {
+                $scope.errors.city = true;
+                result = false;
+            }
+
+            return result;
         }
 
         function doDownload() {
-            console.log('Path descarga comienzo: ', $scope.downloadObject);
 			// Trick to download images in Firefox
 			HTMLElement.prototype.click = function() {
 				var evt = this.ownerDocument.createEvent('MouseEvents');
@@ -107,7 +147,6 @@ angular.module('avanti').controller('DownloadRequestModalController',
                     function onError(response) {
                         $scope.hasMessage = true;
                         $scope.messageText = 'CONTACT.MESSAGES.SEND_ERROR';
-                        doDownload();
                     }
                 );
             }

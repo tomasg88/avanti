@@ -24,6 +24,7 @@ angular.module('avanti').controller('downloadCtlr',
                 templateUrl: 'views/modals/download-request.html',
                 controller: 'DownloadRequestModalController',
                 size: 'lg',
+                backdrop: 'static',
                 resolve: {
                     resourceId: resource
                 }
