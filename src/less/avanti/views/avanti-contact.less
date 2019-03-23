@@ -6,4 +6,73 @@
     button {
         width: 100%;
     }
+    .contacto-datos {
+        padding-left: 4.5%;
+        width: 50%;
+        text-align: left;
+    }
+
+    .mail {
+        font-size: 22px;
+        letter-spacing: 1.1px;
+        color: #000000;
+        padding-top: 192%;
+    }
+
+    .form-contacto {
+        margin-left: 1%;
+        padding: 0 5%;
+        width: 50%;
+        padding-top: 37%;
+        text-align: left;
+    }
+
+    .mensajes-error {
+        display: block;
+        padding-top: 82%;
+    }
+
+    .error {
+        font-weight: 400;
+        letter-spacing: 2px;
+        position: absolute;
+        margin-left: 47%;
+        top: 44%;
+        font-weight: 500;
+    }
+
+    _:-moz-tree-row(hover),
+    .error {
+        top: 42%;
+    }
+}
+
+
+
+@media (min-width: @screen-xxs) and (max-width: @screen-xxs-max) {
+    .contact {
+        .contacto-datos {
+            padding-left: 4.5%;
+            width: 50%;
+            text-align: left;
+        }
+        .mail {
+            font-size: 17px;
+            letter-spacing: 0;
+            position: absolute;
+            bottom: 30px;
+        }
+        .form-contacto {
+            margin-left: 0;
+            padding-top: 70%;
+        }
+        .mensajes-error {
+            display: block;
+            padding-top: 82%;
+        }
+        .error {
+            letter-spacing: 1px;
+            top: 47%;
+        }
+    }
 }
