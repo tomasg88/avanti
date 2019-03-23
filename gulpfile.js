@@ -24,11 +24,15 @@ var webServer = require('gulp-webserver');
 var GLOBS = {};
 GLOBS.output = 'dist';
 GLOBS.fonts = 'src/fonts/*';
+GLOBS.assets = 'src/assets/**/*';
 GLOBS.images = ['src/img/*', 'src/img/**/*'];
 GLOBS.js = 'src/js/**/*';
 GLOBS.languages = 'src/languages/*';
 GLOBS.libs = 'src/libs/**/*';
-GLOBS.less = 'src/less/avanti.less';
+GLOBS.less = {
+    main: 'src/less/avanti.less',
+    dir: 'src/less/**/*'
+};
 GLOBS.html = 'src/index.html';
 GLOBS.views = 'src/views/**/*';
 
@@ -61,6 +65,11 @@ gulp.task('copy:images', function() {
         .pipe(gulp.dest(path.join(GLOBS.output, 'img')));
 });
 
+gulp.task('copy:assets', function() {
+    return gulp.src(GLOBS.assets)
+        .pipe(gulp.dest(path.join(GLOBS.output, 'assets')));
+});
+
 gulp.task('copy:html', function() {
     return gulp.src(GLOBS.html)
         .pipe(gulp.dest(GLOBS.output));
@@ -77,7 +86,7 @@ gulp.task('copy:libs', function() {
 });
 
 gulp.task('copy', function(done) {
-    seq('copy:fonts', 'copy:images', 'copy:html', 'copy:views', 'copy:libs', done);
+    seq('copy:fonts', 'copy:images', 'copy:assets', 'copy:html', 'copy:views', 'copy:libs', done);
 });
 
 // --------------------------------------------------------
@@ -86,7 +95,7 @@ gulp.task('copy', function(done) {
 var CSS_TEMP_DIR = path.join(os.tmpdir(), 'avanti', 'css');
 
 gulp.task('css:build', function() {
-    return gulp.src(GLOBS.less)
+    return gulp.src(GLOBS.less.main)
         .pipe(less())
         .pipe(gulp.dest(CSS_TEMP_DIR));
 });
@@ -158,7 +167,7 @@ gulp.task('watch', function() {
 	gulp.watch(GLOBS.libs, ['copy:libs']).on('change', watchLog);
 	gulp.watch(GLOBS.js, ['js']).on('change', watchLog);
 	// gulp.watch(GLOBS.jsLogin, ['js:login']).on('change', watchLog);
-	gulp.watch(GLOBS.less, ['css']).on('change', watchLog);
+	gulp.watch(GLOBS.less.dir, ['css']).on('change', watchLog);
 	// gulp.watch(GLOBS.html, ['copy:html']).on('change', watchLog);
 	// gulp.watch(GLOBS.videoPlayer, ['copy:videoPlayer']).on('change', watchLog);
 	// gulp.watch(GLOBS.icons, ['icons']).on('change', watchLog);
