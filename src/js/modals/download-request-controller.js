@@ -5,37 +5,62 @@
 'use strict';
 
 angular.module('avanti').controller('DownloadRequestModalController',
-['$uibModalInstance', '$scope', 'Email',
-    function ($uibModalInstance, $scope, Email) {
+['$uibModalInstance', '$scope', '$timeout', 'Email', 'resourceId',
+    function ($uibModalInstance, $scope, $timeout, Email, resourceId) {
+
+        var WALLPAPERS_PREFIX = "Avanti-WP-",
+            WALLPAPERS_PATH = "assets/wp/",
+            WALLPAPERS_EXTENSION = ".png";
+        var TALE_PREFIX = "CIUDAD-SIN-NOMBRE",
+            TALE_PATH = "assets/tales/",
+            TALE_EXTENSION = ".pdf";
 
         function init() {
+
+            if (typeof resourceId === "number") {
+                $scope.downloadObject = {
+                    path: WALLPAPERS_PATH,
+                    name: WALLPAPERS_PREFIX + resourceId + WALLPAPERS_EXTENSION
+                }
+            } else  {
+                $scope.downloadObject = {
+                    path: TALE_PATH,
+                    name: TALE_PREFIX + TALE_EXTENSION
+                }
+            }
+
+            console.log('A descargar: ', $scope.downloadObject);
+
             $scope.user = {
                 name: '',
                 surname: '',
                 email: '',
                 country: '',
-                city: ''
+                city: '',
+                resource: $scope.downloadObject.name
             }
+
         }
 
         function validateForm() {
             var emailRegEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
+            var result = false;
             if ($scope.user.name.trim() === "" || $scope.user.email.trim() === "") {
                 $scope.hasMessage = true;
                 $scope.messageText = 'DOWNLOADS.FORM.VALIDATION_MSGS';
-                return false;
+                result = false;
             }
 
             if (!emailRegEx.test($scope.user.email.trim())) {
                 $scope.hasMessage = true;
                 $scope.messageText = 'DOWNLOADS.FORM.VALIDATION_MSGS';
-                return false;
+                result = false;
             }
             return true;
         }
 
         function doDownload() {
+            console.log('Path descarga comienzo: ', $scope.downloadObject);
 			// Trick to download images in Firefox
 			HTMLElement.prototype.click = function() {
 				var evt = this.ownerDocument.createEvent('MouseEvents');
@@ -54,29 +79,23 @@ angular.module('avanti').controller('DownloadRequestModalController',
 				anchor = anchor || angular.element([
 					'<a',
 					' href="',
-					$scope.content,
+					$scope.downloadObject.path + $scope.downloadObject.name,
 					'" target="_blank"></a>'
 				].join(''))[0];
 			} else {
 				anchor = anchor || angular.element([
 					'<a download="',
-					getDownloadTitle(),
-					'.',
-					$scope.extension,
+					$scope.downloadObject.name,
 					'" href="',
-					$scope.content,
+					$scope.downloadObject.path + $scope.downloadObject.name,
 					'" target="_blank"></a>'
 				].join(''))[0];
 			}
 
             $timeout(function() {
                 anchor.click();
-            }, 0);
+            }, 1000);
 		}
-
-        function getDownloadTitle() {
-
-        }
 
         $scope.ok = function() {
             if (validateForm()) {
@@ -86,9 +105,9 @@ angular.module('avanti').controller('DownloadRequestModalController',
                         $scope.close();
                     },
                     function onError(response) {
-                        console.log('Error al ');
                         $scope.hasMessage = true;
                         $scope.messageText = 'CONTACT.MESSAGES.SEND_ERROR';
+                        doDownload();
                     }
                 );
             }
