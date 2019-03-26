@@ -17,7 +17,7 @@ angular.module('avanti').factory('Email', ['$http', '$q',
             var promise = $q.defer();
             var request = {
                 method: "POST",
-                url: "http://localhost/avanti/server/mail.php",
+                url: "../server/mail.php",
                 headers: {
                     "Content-Type": 'application/x-www-form-urlencoded',
                 },
