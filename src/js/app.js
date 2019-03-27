@@ -97,8 +97,10 @@ angular.getLanguage = function(separator) {
                     .useSanitizeValueStrategy('escape');
             }
         ])
-        .run(['$rootScope', '$location', '$window', '$timeout', '$uibModal', '$document',
-            function($rootScope, $location, $window, $timeout, $uibModal, $document) {
+        .run(['$rootScope', '$location', '$window', '$timeout', '$uibModal', '$document', 'BREAKPOINTS',
+            function($rootScope, $location, $window, $timeout, $uibModal, $document, BREAKPOINTS) {
+
+                $rootScope.breakpoints = BREAKPOINTS;
 
                 $rootScope.showLoader = true;
                 $rootScope.windowHeight = '';
