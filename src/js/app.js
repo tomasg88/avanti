@@ -132,16 +132,16 @@ angular.getLanguage = function(separator) {
                     $rootScope.showLoader = false;
                 }, 3000);
 
-                // $timeout(function() {
-                //     var parentSelector, size;
-                //     var parentElem = angular.element($document[0].querySelector('.modal-demo'));
-                //     $uibModal.open({
-                //         animation: true,
-                //         templateUrl: 'myModalContent.html',
-                //         controller: 'ModalController',
-                //         size: 'lg'
-                //     });
-                // }, 6000);
+                $timeout(function() {
+                    var parentSelector, size;
+                    var parentElem = angular.element($document[0].querySelector('.modal-demo'));
+                    $uibModal.open({
+                        animation: true,
+                        templateUrl: 'myModalContent.html',
+                        controller: 'ModalController',
+                        size: 'lg'
+                    });
+                }, 6000);
 
             }
         ]);
