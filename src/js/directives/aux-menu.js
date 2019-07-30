@@ -9,7 +9,15 @@ angular.module('avanti').directive('auxMenu', ['$rootScope', '$location', '$time
             scope: {},
             link: function(scope, elem, attr) {
 
-                var timeoutFn = null;
+                var timeoutFn = null,
+                    HIDE_MENU_TIME = 0;
+
+                if ($rootScope.breakpoints.isExtraSmall) {
+                    HIDE_MENU_TIME = 3000;
+                    $("div.menu-mobile span p").removeClass("ocultar");
+                } else {
+                    HIDE_MENU_TIME = 1500;
+                }
 
                 scope.$watch(function() {
                     return $location.path();
@@ -41,32 +49,55 @@ angular.module('avanti').directive('auxMenu', ['$rootScope', '$location', '$time
                 );
 
                 $(".lengueta").click(function(event) {
-                    $(".menu-mobile").transition({
-                        y: "-40px"
-                    });
+                    showMenu()
                 });
 
                 $("div.menu-mobile span").hover(function(event) {
                     event.preventDefault();
-                    $(event.currentTarget.children[0]).removeClass('ocultar');
+                    if (!$rootScope.breakpoints.isExtraSmall) {
+                        $(event.currentTarget.children[0]).removeClass('ocultar');
+                    }
                     if (timeoutFn) {
                         $timeout.cancel(timeoutFn);
                     }
                 }, function(event) {
                     event.preventDefault();
-                    $(event.currentTarget.children[0]).addClass('ocultar');
-                    timeoutFn = $timeout(function(event) {
-                        $(".menu-mobile").transition({
-                            y: "0px"
-                        });
-                    }, (1500));
+                    if (!$rootScope.breakpoints.isExtraSmall) {
+                        $(event.currentTarget.children[0]).addClass('ocultar');
+                    }
+                    timeoutFn = $timeout(function() {
+                        console.log('Timeout esconde menu');
+                        hideMenu()
+                    }, (3000));
                 });
 
                 scope.linkTo = function(target) {
-                    $(".menu-mobile").transition({
-                        y: "0px"
-                    });
+                    hideMenu();
                     $location.path(target)
+                }
+
+                function showMenu() {
+                    if ($rootScope.breakpoints.isExtraSmall) {
+                        $(".menu-mobile").transition({
+                            x: "100vw"
+                        });
+                    } else {
+                        $(".menu-mobile").transition({
+                            y: "-40px"
+                        });
+                    }
+                }
+
+                function hideMenu() {
+                    if ($rootScope.breakpoints.isExtraSmall) {
+                        $(".menu-mobile").transition({
+                            x: "0px"
+                        });
+                    } else {
+                        $(".menu-mobile").transition({
+                            y: "0px"
+                        });
+                    }
                 }
 
             }

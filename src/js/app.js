@@ -97,8 +97,10 @@ angular.getLanguage = function(separator) {
                     .useSanitizeValueStrategy('escape');
             }
         ])
-        .run(['$rootScope', '$location', '$window', '$timeout', '$uibModal', '$document',
-            function($rootScope, $location, $window, $timeout, $uibModal, $document) {
+        .run(['$rootScope', '$location', '$window', '$timeout', '$uibModal', '$document', 'BREAKPOINTS', 'WELCOME_MODAL',
+            function($rootScope, $location, $window, $timeout, $uibModal, $document, BREAKPOINTS, WELCOME_MODAL) {
+
+                $rootScope.breakpoints = BREAKPOINTS;
 
                 $rootScope.showLoader = true;
                 $rootScope.windowHeight = '';
@@ -130,16 +132,18 @@ angular.getLanguage = function(separator) {
                     $rootScope.showLoader = false;
                 }, 3000);
 
-                // $timeout(function() {
-                //     var parentSelector, size;
-                //     var parentElem = angular.element($document[0].querySelector('.modal-demo'));
-                //     $uibModal.open({
-                //         animation: true,
-                //         templateUrl: 'myModalContent.html',
-                //         controller: 'ModalController',
-                //         size: 'lg'
-                //     });
-                // }, 6000);
+                if (WELCOME_MODAL) {
+                    $timeout(function() {
+                        var parentSelector, size;
+                        var parentElem = angular.element($document[0].querySelector('.modal-demo'));
+                        $uibModal.open({
+                            animation: true,
+                            templateUrl: 'myModalContent.html',
+                            controller: 'ModalController',
+                            size: 'lg'
+                        });
+                    }, 6000);
+                }
 
             }
         ]);
