@@ -1,4 +1,4 @@
-<div class="row no-gutters text-center wallpapers" ng-controller="downloadCtlr">
+<div class="row no-gutters text-center wallpapers">
 	<div class="col-lg-12 col-md-12 col-sm-12">
 		<div class="background back-degrade-sup altura-full" >
 			<span class="indicador oscuro">
@@ -9,9 +9,15 @@
 			</h1>
 			<span class="separador"></span>
 			<div class="row no-gutters content">
-				<div class="col-lg-3 col-md-1 col-sm-1"></div>
-				<div class="col-lg-3 col-md-2 col-sm-2 col-xs-12" ng-repeat="wp in [0, 1]">
-					<img class="pointer" ng-click="openDownloadRequest($index + 1)" ng-src="{{ wpPrefix + ($index + 1) + extension }}" alt="">
+				<!-- <div class="col-lg-1 col-md-1 col-sm-1"></div> -->
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wallpapers-container">
+					<img class="pointer" ng-repeat="wp in [0, 1, 2, 3, 4]"
+						downloadable
+						downloadable-path="{{ 'img/wallpapers/' }}" 
+						downloadable-name="{{'wallpaper-' + ($index + 1) + '.jpg' }}"
+						ng-src="{{ 'img/wallpapers/wallpaper-' + ($index + 1) + '.jpg' }}" 
+						alt=""
+					/>
 				</div>
 			</div>
 			<span class="separador"></span>

@@ -81,11 +81,9 @@ angular.getLanguage = function(separator) {
                     })
                     .when('/download', {
                         templateUrl: 'views/download.html',
-                        controller: 'downloadCtlr'
                     })
                     .when('/wallpapers', {
                         templateUrl: 'views/wallpapers.html',
-                        controller: 'downloadCtlr'
                     });
 
                 $translateProvider
