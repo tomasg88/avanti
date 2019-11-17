@@ -2,8 +2,10 @@
 .wallpapers {
     .content {
         margin: 5px 0;
-        img {
-            padding: 0 10px;
+        .wallpapers-container {
+            display: flex;
+            justify-content: space-evenly;
+            flex-flow: wrap;
         }
     }
 }
@@ -14,7 +16,6 @@
         .content {
             margin: 5px 0;
             img {
-                width: 80%;
                 padding: 10px;
             }
         }
