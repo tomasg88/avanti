@@ -66,7 +66,6 @@ angular.module('avanti').directive('auxMenu', ['$rootScope', '$location', '$time
                         $(event.currentTarget.children[0]).addClass('ocultar');
                     }
                     timeoutFn = $timeout(function() {
-                        console.log('Timeout esconde menu');
                         hideMenu()
                     }, (3000));
                 });
