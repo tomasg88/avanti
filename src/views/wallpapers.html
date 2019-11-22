@@ -9,13 +9,16 @@
 			</h1>
 			<span class="separador"></span>
 			<div class="row no-gutters content">
+				Hacé click para descargar la imagen
+			</div>
+			<div class="row no-gutters content">
 				<!-- <div class="col-lg-1 col-md-1 col-sm-1"></div> -->
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wallpapers-container">
 					<img class="pointer" ng-repeat="wp in [0, 1, 2, 3, 4]"
 						downloadable
-						downloadable-path="{{ 'img/wallpapers/' }}" 
-						downloadable-name="{{'wallpaper-' + ($index + 1) + '.jpg' }}"
-						ng-src="{{ 'img/wallpapers/wallpaper-' + ($index + 1) + '.jpg' }}" 
+						downloadable-path="{{ 'assets/wp/' }}" 
+						downloadable-name="{{'Avanti-WP-' + ($index + 1) + '.png' }}"
+						ng-src="{{ 'assets/wp/Avanti-WP-' + ($index + 1) + '.png' }}" 
 						alt=""
 					/>
 				</div>
