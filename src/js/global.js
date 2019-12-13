@@ -10,4 +10,4 @@ angular.module('avanti')
         mobileInterval: 14000,
         ttl: 4000
     })
-    .constant('WELCOME_MODAL', true)
+    .constant('WELCOME_MODAL', false)
